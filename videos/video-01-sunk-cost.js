@@ -48,8 +48,16 @@ No shadows. High contrast. Colors: red background, white + yellow text. Clean, b
   termBeat: '24–37s',
   scriptNote: 'lo script completo con i timestamp reali',
 
-  pubTitle: "The sunk cost fallacy: why you can't walk away",
-  hashtags: '#psychology #sunkcostfallacy #mindset #relationships #kahneman',
+  pubTitle: "Why You Can't Walk Away: The Sunk Cost Fallacy",
+  pubDesc:
+`You finished something bad just so it "wasn't a waste." The bad job. The dead relationship. The movie you hated an hour in.
+
+Nobel-winning psychologist Daniel Kahneman called it the sunk cost fallacy: your brain treats what you've already spent as a reason to keep spending more. But the past cost doesn't justify the future one — that's the glitch.
+
+💬 What's one thing you stayed in way too long? Tell me below.
+
+🧠 Follow for more dark psychology breakdowns.`,
+  hashtags: '#sunkcostfallacy #darkpsychology #psychology #cognitivebias #mindset #relationships #psychologyfacts',
   scenesNote: '<b>5 clip nuovi da generare:</b> 3.2, 5.2, 6.2, 7.2, 8.2 — tutti gli altri li hai già. Ogni clip nuovo cade su un punto preciso del voiceover.',
 
   scenes: [

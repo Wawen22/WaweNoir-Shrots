@@ -775,6 +775,7 @@ function editStage(v,vid){
 function publishStage(v,vid){
   var body='<div class="row"><span class="row__k">Export</span><span class="row__v">1080×1920 · 60fps · MP4</span></div>'
     +fieldLabel('Titolo <span class="faint">— con il nome scientifico, ≤60 caratteri</span>')+copyLang(v.pubTitle||'')
+    +fieldLabel('Descrizione <span class="faint">— hook nei primi ~125 caratteri</span>')+copyPlain(v.pubDesc||'')
     +fieldLabel('Hashtag')+copyPlain(v.hashtags||'')
     +'<div style="margin-top:16px">'+checkItem(vid+'.pub.yt','Pubblicato su YouTube Shorts')+checkItem(vid+'.pub.tk','Pubblicato su TikTok')+checkItem(vid+'.pub.ig','Pubblicato su Instagram Reels')+'</div>'
     +doneRow(vid,'publish');

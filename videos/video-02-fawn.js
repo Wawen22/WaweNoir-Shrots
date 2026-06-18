@@ -47,8 +47,16 @@ No shadows. High contrast, blue background, white + yellow text. Clean, bold, sc
   scriptNote: '~82s reali con il pacing di ElevenLabs',
   scriptHint: 'Hook → Bridge → Core (fawn response) → Close',
 
-  pubTitle: 'The fawn response: why you apologize for nothing',
-  hashtags: '#psychology #fawnresponse #peoplepleasing #traumaresponse #boundaries',
+  pubTitle: "Why You Always Say Sorry (Even When It's Not Your Fault)",
+  pubDesc:
+`You apologized again — for something that wasn't even your fault. Someone bumped into you, and you said sorry.
+
+Therapist Pete Walker called it the fawn response: the 4th trauma response after fight, flight, freeze. When your nervous system decides the safest thing to do with danger is to please it. You're not too sensitive — you're running an old survival strategy with people who aren't dangerous anymore.
+
+💬 What do you say sorry for that was never your fault? Tell me below.
+
+🧠 Follow for more dark psychology breakdowns.`,
+  hashtags: '#fawnresponse #peoplepleasing #traumaresponse #darkpsychology #psychology #boundaries #psychologyfacts',
   scenesNote: '<b>16 clip totali da generare:</b> 13 con Higgsfield (Sara) + 3 con Flow/Veo 3 (cervo 5.1/5.2 e l\'ombra astratta 7.2). Ogni stacco cade su un punto preciso del voiceover.',
 
   scenes: [
