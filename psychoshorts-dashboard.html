@@ -351,8 +351,7 @@ code{font-family:var(--fmono);font-size:.86em;background:var(--iris-bg);color:va
     </div>
     <div class="nav__group">
       <div class="nav__label">Produzione</div>
-      <button class="nav__item" data-action="nav" data-page="video1"><span class="nav__ic">1</span>Sunk Cost Fallacy<span class="nav__dot"></span></button>
-      <button class="nav__item" data-action="nav" data-page="video2"><span class="nav__ic">2</span>The Fawn Response<span class="nav__dot"></span></button>
+      <div id="nav-videos"></div>
       <button class="nav__item" data-action="nav" data-page="newvideo"><span class="nav__ic">+</span>Nuovo video</button>
     </div>
     <div class="nav__group">
@@ -400,864 +399,8 @@ code{font-family:var(--fmono);font-size:.86em;background:var(--iris-bg);color:va
   </div>
 </section>
 
-<!-- ════════════ VIDEO 1 ════════════ -->
-<section id="page-video1" class="page">
-  <div class="stepper-wrap"><nav class="stepper" data-video="v1"></nav></div>
-  <div class="phead">
-    <div class="phead__row">
-      <div>
-        <div class="phead__eyebrow">Video 01 · Riferimento · Bias cognitivo</div>
-        <div class="phead__title">Sunk Cost Fallacy</div>
-        <div class="phead__sub">Voiceover reale 82s · personaggio Sara · 12 clip su 9 scene. Questo video è il modello completo da cui copiare i prossimi.</div>
-      </div>
-      <span class="pill pill--iris" data-scene-count="v1">— scene</span>
-    </div>
-  </div>
-
-  <!-- COVER -->
-  <div class="cover">
-    <div class="cover__head">
-      <span class="cover__badge">▶ Copertina</span>
-      <div>
-        <div class="cover__title">Il frame che ferma lo scroll</div>
-        <div class="cover__sub">Higgsfield scrive il testo dentro l'immagine. Formula virale: volto in primo piano, sfondo a tinta unita acceso, testo sopra bianco + sotto giallo enorme. Rigenera finché il testo è corretto.</div>
-      </div>
-    </div>
-    <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Prompt copertina <span class="spec">📐 9:16 · testo + stile inclusi</span></div>
-    <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>Vertical 9:16 viral psychology thumbnail.
-
-&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; center frame, medium close-up, eyes wide open looking directly into camera with a trapped, haunted realization — like she just understood she stayed somewhere far too long. Mouth slightly open. High energy.
-
-Background: bold solid crimson red (#E63946), slightly gradient toward dark red at the edges. Vivid, saturated, eye-catching.
-
-Text overlay, Montserrat ExtraBold all caps, perfectly sharp:
-- TOP: "WHY YOU CAN'T" in large white letters, thick black outline, wide letter-spacing.
-- CENTER BOTTOM (below face): "WALK AWAY" in massive bright yellow letters, even larger, thick black outline.
-
-No shadows. High contrast. Colors: red background, white + yellow text. Clean, bold, scroll-stopping. Photorealistic face.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-    <div class="field-label">Testo in copertina <span class="faint">— già incluso nel prompt sopra</span></div>
-    <div class="copy-wrap"><div class="cover-text" data-copy-src>WHY YOU CAN'T <span class="hl">WALK AWAY</span></div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-    <div class="tip gold">Formula (già nel prompt): sfondo a tinta unita acceso, volto in primo piano con occhi spalancati, testo Montserrat ExtraBold MAIUSCOLO — riga sopra <b>bianca</b>, riga sotto <b>gialla enorme</b>, outline nero spesso, niente ombre. Se cambi le parole, modificale <b>dentro il prompt</b>. Alternative: "YOU ALREADY KNEW" · "THE TRAP IN YOUR BRAIN" · "WHY YOU STAYED".</div>
-    <div class="check" data-action="check" data-check="v1.cover.done"><div class="check__box">✓</div><div class="check__txt">Copertina generata e testo aggiunto</div></div>
-  </div>
-
-  <!-- STAGE 1 SCRIPT -->
-  <div class="stage open" data-video="v1" data-stage="script">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">1</div>
-      <div class="stage__meta"><div class="stage__title">Topic & Script</div><div class="stage__hint">Lo script completo con i timestamp reali</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="field-label">Script completo <span class="faint">— copia tutto e incollalo dove ti serve</span></div>
-      <div class="copy-wrap">
-        <div class="prompt lang" data-copy-src>[0–4s] You finished something bad just so it "wasn't a waste."
-
-[4–13s] Maybe it was a movie you hated an hour in. Maybe it was a job that was grinding you into dust. Maybe it was a relationship that stopped working years before it ended.
-
-[13–24s] And the whole time, some part of you knew. But you stayed. You kept going. Because leaving felt like losing everything you'd already put in.
-
-[24–37s] That feeling has a name. Psychologist Daniel Kahneman — who won the Nobel Prize for this — called it the sunk cost fallacy. Your brain treats time and money you've already spent as a reason to keep spending more.
-
-[37–48s] Think of it like a leaking bucket. You don't pour more water in to save the water that already fell out. But that's exactly what your brain tells you to do.
-
-[48–58s] Here's the disturbing part. The more you've invested, the harder it becomes to leave. Not easier. The pain of quitting scales with how long you stayed.
-
-[58–67s] So your brain isn't being loyal. It's not being strong. It's running a glitch — confusing past cost with future value. Two completely different things.
-
-[67–75s] The years don't justify the next year. The money doesn't justify more money. The suffering doesn't justify more suffering.
-
-[75–82s] Drop this in the comments: what's one thing you stayed in way too long — and what was the story you told yourself to justify it?</div>
-        <button class="copy-btn" data-action="copy" title="Copia" aria-label="Copia">⧉</button>
-      </div>
-      <div class="tip gold">⭐ Termine chiave da mostrare in giallo nel video: <span class="term">sunk cost fallacy</span> — il momento in cui la voce lo pronuncia (24–37s) è quello che le persone screenshottano.</div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v1" data-stage="script">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 2 VOICE -->
-  <div class="stage" data-video="v1" data-stage="voice">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">2</div>
-      <div class="stage__meta"><div class="stage__title">Voce</div><div class="stage__hint">ElevenLabs · Liam · annota la durata reale</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="row"><span class="row__k">File</span><span class="row__v">sunk-cost-v1.mp3 · 1:22 (82s)</span></div>
-      <div class="row"><span class="row__k">Voce</span><span class="row__v">Liam — Viral Short-Form Storyteller</span></div>
-      <div class="row"><span class="row__k">Modello</span><span class="row__v">Eleven v3 · Normale · Stability ~45% · Similarity 75%</span></div>
-      <div class="field-label">Durata reale dell'audio generato</div>
-      <input class="inp" data-field="v1.field.voDur" placeholder="es. 82"> <span class="muted" style="font-size:12px">secondi — su questo mappi le scene</span>
-      <div class="tip">ElevenLabs legge a ~60 caratteri/secondo: uno script "da 55s" sulla carta diventa ~80s reali. Aggiungi i <code>&lt;break time="0.5s" /&gt;</code> tra i blocchi.</div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v1" data-stage="voice">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 3 SCENES -->
-  <div class="stage" data-video="v1" data-stage="scenes">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">3</div>
-      <div class="stage__meta"><div class="stage__title">Scene & Clip</div><div class="stage__hint">Ogni prompt ha la sua icona copia · spunta le scene fatte</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-
-      <!-- SCENE 1 -->
-      <div class="scene" data-video="v1" data-scene="s1">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">0–4s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 1 — Hook: Sara intorpidita davanti alla TV</div><div class="scene__sub">"You finished something bad just so it wasn't a waste."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Immagine <span class="spec">📐 9:16</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; sitting alone in a dark room, face lit only by the cold blue light of a TV screen. She is staring forward, expression empty and exhausted. Not watching — just enduring. Eyes open but emotionally absent. Cinematic, shallow depth of field, desaturated blue tones. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Animazione <span class="spec">⏱ genera 4s → taglia a 3s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Very slow push-in toward her face. The TV light flickers faintly on her skin. She doesn't move. Barely visible breath. Slight handheld camera drift. Duration 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">In CapCut: taglia il clip a 3 secondi esatti. Tieni i primi 3s dove la luce del TV flicka sul suo volto.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s1">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 2a -->
-      <div class="scene scene--alt" data-video="v1" data-scene="s2a">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">4–7s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 2a — Il film: mano sul telecomando</div><div class="scene__sub">"Maybe it was a movie you hated an hour in."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Immagine <span class="spec">📐 9:16 · clip 1.5–2s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; on a couch, remote control in her hand, thumb hovering over it but not pressing. She is looking at the TV screen with tired resignation. She knows she should turn it off. She doesn't. Warm living room light, slightly desaturated. Close-up on hand and face. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Animazione <span class="spec">⏱ genera 4s → usa 1.5–2s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Close-up drift from her hand holding the remote to her face. Slow and heavy. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Questo clip è breve nel video finale (1.5s). Genera 4s e scegli il momento migliore in CapCut.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s2a">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 2b -->
-      <div class="scene" data-video="v1" data-scene="s2b">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">7–10s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 2b — Il lavoro: fissare lo schermo</div><div class="scene__sub">"Maybe it was a job that was grinding you into dust."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Immagine <span class="spec">📐 9:16 · clip 1.5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; at a desk, staring at a laptop screen, both hands flat on the desk. Not typing — just staring. Expression: hollowed out, drained, the energy slowly gone. Fluorescent office light. Slightly cold tones. Face visible. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Animazione <span class="spec">⏱ genera 4s → usa 1.5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Camera holds still on her face. Her eyes don't blink for a long moment — then a slow, heavy blink. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s2b">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 2c -->
-      <div class="scene scene--alt" data-video="v1" data-scene="s2c">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">10–13s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 2c — La relazione: distanza sul divano</div><div class="scene__sub">"Maybe it was a relationship that stopped working years before it ended."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Immagine <span class="spec">📐 9:16 · clip 1.5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; sitting on one end of a couch, a man sitting on the other end. They are not touching, not looking at each other. The distance between them feels heavy. Both looking away. Warm but desaturated living room. Evening light. Cinematic. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Animazione <span class="spec">⏱ genera 4s → usa 1.5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Very slow zoom out to reveal the space between them on the couch. The distance feels larger as the camera pulls back. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s2c">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 3 -->
-      <div class="scene" data-video="v1" data-scene="s3">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">13–24s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 3 — Sara alla finestra di notte <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"And the whole time, some part of you knew. But you stayed. You kept going..."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 3.1 — "...some part of you knew" <span class="spec">~5s · hai già</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; standing at a window at night, looking outside. Her reflection visible in the glass — two versions of her, one looking out, one looking back at us. Expression: the quiet weight of someone who already knows the answer but isn't ready to act on it. Side light. Desaturated. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Very slow zoom into her reflection in the glass. The outside world stays blurred — only her reflection grows sharper. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Questo è il clip da 6-7s che hai già generato — copre la prima metà del blocco. Va benissimo così.</div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 3.2 — "But you stayed. You kept going..." <span class="spec">~6s · da generare</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; turning away from the window, sitting down slowly on the edge of a bed in the dark. She doesn't leave the room. She stays. Her shoulders carry the weight of the decision not to act. Dim warm light. Desaturated. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Slow camera follows her as she sits down. She settles into stillness, looking at the floor. 6 seconds. Heavy, resigned.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Nuovo clip: mostra l'atto di "restare". Lo stacco tra i due clip cade su "But you stayed" — il cambio visivo sottolinea la parola.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s3">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 4a -->
-      <div class="scene scene--alt" data-video="v1" data-scene="s4a">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">24–31s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 4a — Il nome: Kahneman & sunk cost fallacy <span class="pill pill--gold" style="margin-left:4px">⭐ chiave</span></div><div class="scene__sub">"That feeling has a name. Psychologist Daniel Kahneman... called it the sunk cost fallacy."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 4a <span class="spec">📐 9:16 · ~7s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; sitting at a table, looking down at her hands, then slowly lifting her gaze. Expression: the moment of recognition — like someone just named something she has felt for years but never had words for. Quiet relief mixed with understanding. Soft warm light from one side. Slightly desaturated. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Very slow push-in toward her face. Her expression shifts almost imperceptibly from heaviness to a quiet moment of clarity. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip gold">⭐ MOMENTO CHIAVE: in CapCut fai apparire il testo grande "SUNK COST FALLACY" in giallo mentre la voce lo pronuncia. È la parola che le persone screenshottano.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s4a">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 4b -->
-      <div class="scene" data-video="v1" data-scene="s4b">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">31–37s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 4b — La spiegazione: tempo e denaro già spesi</div><div class="scene__sub">"Your brain treats time and money you've already spent as a reason to keep spending more."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 4b <span class="spec">📐 9:16 · ~6s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; seen from the side, looking at a desk covered with scattered receipts, an old clock, and a calendar. Symbols of time and money already spent. She stares at them with quiet weight. Cool desaturated light. Cinematic. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Slow camera drift across the objects on the desk — the clock, the receipts — then settling on her face. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s4b">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 5 BUCKET -->
-      <div class="scene scene--alt" data-video="v1" data-scene="s5">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">37–48s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 5 — Il secchio che perde (metafora) <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"Think of it like a leaking bucket. You don't pour more water in to save the water that already fell out."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="note note--done" style="margin-bottom:12px"><span class="ic">◆</span><div>Unica scena <b>senza Sara</b>. Google Flow / Veo 3 gestisce meglio gli oggetti fisici con acqua.</div></div>
-            <div class="field-label"><span class="toolbadge tb-f">Flow / Veo 3</span> CLIP 5.1 — "Think of it like a leaking bucket" <span class="spec">~5s · hai già</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--clip" data-copy-src>Extreme close-up of a metal bucket with a crack at the bottom. Water drips steadily out from the crack. Cinematic macro shot. Slow motion. Cool blue-grey tones. No faces. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Primo clip: stabilisce il secchio e la perdita. Il clip che hai già va bene qui.</div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-f">Flow / Veo 3</span> CLIP 5.2 — "You don't pour more water in..." <span class="spec">~6s · da generare</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--clip" data-copy-src>A pair of female hands — no face visible — slowly pours more water into the leaking bucket from the top. The water keeps falling out below as more is added above. The futility is visible. Cinematic macro shot. Slow motion. Cool blue-grey tones. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Secondo clip: l'atto di versare ancora acqua — il comportamento irrazionale. Lo stacco cade su "You don't pour more water in".</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s5">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 6 SOGLIA -->
-      <div class="scene" data-video="v1" data-scene="s6">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">48–58s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 6 — Sara sulla soglia, non riesce ad andarsene <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"The more you've invested, the harder it becomes to leave. Not easier."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 6.1 — "Here's the disturbing part..." <span class="spec">~5s · hai già</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; standing in a doorway, one hand on the door frame, body half-turned to leave but feet still planted. She is looking back into the dark room behind her. The light comes from ahead — outside, unseen, warm. The room behind is cold and heavy. Silhouette light from the front. Cinematic. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Her hand tightens slightly on the door frame. She doesn't move forward or back. Camera holds still. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Primo clip: la soglia, la tensione del non riuscire ad andarsene.</div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 6.2 — "Not easier. The pain of quitting scales..." <span class="spec">~5s · da generare</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; close-up of her face in the doorway light, eyes closed for a moment, jaw tense. The weight of years visible in her expression. A single moment of almost-leaving that passes. Cinematic, dramatic side light. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Extreme slow push to her face. Her eyes open again, resigned. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Lo stacco cade su "Not easier." — la frase più dura del video. Il cambio visivo improvviso la sottolinea.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s6">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 7 GLITCH -->
-      <div class="scene scene--alt" data-video="v1" data-scene="s7">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">58–67s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 7 — Il cervello in glitch <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"It's running a glitch — confusing past cost with future value."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 7.1 — "So your brain isn't being loyal..." <span class="spec">~5s · hai già</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; sitting, head slightly bowed, eyes closed. Around her head, barely visible, a faint pattern of light like neurons firing — subtle, not cartoonish. Dark background. Purple and blue tones. Cinematic. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>The light pattern around her head pulses slowly once. Her expression doesn't change. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Primo clip: il cervello "in glitch".</div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-f">Flow / Veo 3</span> CLIP 7.2 — "confusing past cost with future value..." <span class="spec">~5s · da generare</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--clip" data-copy-src>Abstract split visual: on one side an old clock and scattered receipts (the past), on the other side an empty open road stretching forward (the future). A faint glitch effect separates them. Dark cinematic tones, purple and blue. No face. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>The glitch line between past and future flickers. Slow subtle movement. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Lo stacco cade su "confusing past cost with future value" — il visual mostra letteralmente i due concetti separati.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s7">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 8 PAVIMENTO -->
-      <div class="scene" data-video="v1" data-scene="s8">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">67–75s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 8 — Sara sul pavimento, esausta <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"The years don't justify the next year. The money doesn't justify more money..."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 8.1 — "The years don't justify the next year..." <span class="spec">~4s · hai già</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; sitting on the floor, back against a wall, knees pulled to her chest. Head slightly bowed. Not dramatic — quiet, exhausted acceptance. Harsh side light casting a long shadow beside her. Near monochrome, desaturated. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Camera very slowly pulls back, revealing the empty space around her. Her shadow stretches. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Primo clip: Sara esausta sul pavimento.</div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 8.2 — "...the suffering doesn't justify more suffering." <span class="spec">~4s · da generare</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; same position on the floor but seen from a wider, higher angle — she looks small in a large empty room. The isolation is total. Cold desaturated light. Cinematic. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Static high wide shot. Almost no movement — just the stillness of exhaustion. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Il cambio di angolo (da vicino a wide dall'alto) amplifica l'isolamento mentre la frase si ripete tre volte. Climax visivo.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s8">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 9 CTA -->
-      <div class="scene scene--alt" data-video="v1" data-scene="s9">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">75–82s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 9 — Sara guarda in camera per la prima volta <span class="pill pill--done" style="margin-left:4px">CTA</span></div><div class="scene__sub">"Drop this in the comments: what's one thing you stayed in way too long?"</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 9 <span class="spec">📐 9:16 · ~7s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; looking directly into camera for the first time. Expression: calm, knowing, slightly vulnerable — like she's asking you something personal because she's been through it herself. Soft front light. Neutral background. Eyes sharp and steady. Medium close-up. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>No camera movement. She holds the gaze directly into camera. Very subtle breath. Complete stillness. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">La stillness dopo tutto il movimento è il punto. Se serve 1s in più, in CapCut tieni l'ultimo fotogramma fermo (freeze frame). Non spezzare questa scena — la continuità dello sguardo è tutto.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v1" data-scene="s9">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <div class="note note--done" style="margin-top:14px"><span class="ic">◆</span><div><b>5 clip nuovi da generare:</b> 3.2, 5.2, 6.2, 7.2, 8.2 — tutti gli altri li hai già. Ogni clip nuovo cade su un punto preciso del voiceover per far combaciare il cambio visivo con la frase chiave.</div></div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v1" data-stage="scenes">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 4 EDIT -->
-  <div class="stage" data-video="v1" data-stage="edit">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">4</div>
-      <div class="stage__meta"><div class="stage__title">Montaggio</div><div class="stage__hint">CapCut · caption word-by-word · termine in giallo</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="check" data-action="check" data-check="v1.edit.base"><div class="check__box">✓</div><div class="check__txt">Voiceover come traccia base, clip allineati ai timestamp reali</div></div>
-      <div class="check" data-action="check" data-check="v1.edit.caption"><div class="check__box">✓</div><div class="check__txt">Caption word-by-word Montserrat Bold, bianco con outline nero</div></div>
-      <div class="check" data-action="check" data-check="v1.edit.term"><div class="check__box">✓</div><div class="check__txt">Termine "SUNK COST FALLACY" in giallo grande sul beat 24–37s</div></div>
-      <div class="check" data-action="check" data-check="v1.edit.music"><div class="check__box">✓</div><div class="check__txt">Musica dark emotional ambient a 8–10%</div></div>
-      <div class="check" data-action="check" data-check="v1.edit.intro"><div class="check__box">✓</div><div class="check__txt">Intro 0.5s colore brand + nome canale prima dell'hook</div></div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v1" data-stage="edit">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 5 PUBLISH -->
-  <div class="stage" data-video="v1" data-stage="publish">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">5</div>
-      <div class="stage__meta"><div class="stage__title">Pubblica</div><div class="stage__hint">Export · titolo · hashtag · 3 piattaforme</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="row"><span class="row__k">Export</span><span class="row__v">1080×1920 · 60fps · MP4</span></div>
-      <div class="field-label">Titolo <span class="faint">— con il nome scientifico, ≤60 caratteri</span></div>
-      <div class="copy-wrap"><div class="prompt lang" data-copy-src>The sunk cost fallacy: why you can't walk away</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-      <div class="field-label">Hashtag</div>
-      <div class="copy-wrap"><div class="prompt" data-copy-src>#psychology #sunkcostfallacy #mindset #relationships #kahneman</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-      <div style="margin-top:16px">
-        <div class="check" data-action="check" data-check="v1.pub.yt"><div class="check__box">✓</div><div class="check__txt">Pubblicato su YouTube Shorts</div></div>
-        <div class="check" data-action="check" data-check="v1.pub.tk"><div class="check__box">✓</div><div class="check__txt">Pubblicato su TikTok</div></div>
-        <div class="check" data-action="check" data-check="v1.pub.ig"><div class="check__box">✓</div><div class="check__txt">Pubblicato su Instagram Reels</div></div>
-      </div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v1" data-stage="publish">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 6 ANALYZE -->
-  <div class="stage" data-video="v1" data-stage="analyze">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">6</div>
-      <div class="stage__meta"><div class="stage__title">Analisi</div><div class="stage__hint">2 ore di commenti + retention dopo 48h</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="check" data-action="check" data-check="v1.an.comments"><div class="check__box">✓</div><div class="check__txt">Risposto a ogni commento nelle prime 2 ore</div></div>
-      <div class="field-label">Retention media dopo 48h</div>
-      <input class="inp" data-field="v1.field.retention" placeholder="es. 62"> <span class="muted" style="font-size:12px">% — sopra 65% = formato vincente · sotto 50% = problema nell'hook</span>
-      <div class="field-label">Spunti dai commenti per i prossimi video</div>
-      <textarea class="inp wide" data-field="v1.field.notes" placeholder="Cosa scrive la gente nei commenti? Le risposte diventano i prossimi topic."></textarea>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v1" data-stage="analyze">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-  <div class="sec-title">Riepilogo clip</div>
-  <div class="card">
-    <div class="row"><span class="row__k">Scena 1</span><span class="row__v">1 clip (0–4s) · hai già</span><span class="pill pill--iris">Hook</span></div>
-    <div class="row"><span class="row__k">Scene 2a/2b/2c</span><span class="row__v">3 clip (4–13s) · hai già</span><span class="pill pill--gold">Flash cut</span></div>
-    <div class="row"><span class="row__k">Scena 3</span><span class="row__v">2 clip (13–24s) · hai 3.1, genera 3.2</span><span class="pill pill--warn">+1</span></div>
-    <div class="row"><span class="row__k">Scena 4a</span><span class="row__v">1 clip (24–31s) · hai già</span><span class="pill pill--gold">Il nome ⭐</span></div>
-    <div class="row"><span class="row__k">Scena 4b</span><span class="row__v">1 clip (31–37s) · hai già</span><span class="pill pill--iris">Spiegazione</span></div>
-    <div class="row"><span class="row__k">Scena 5</span><span class="row__v">2 clip (37–48s) · hai 5.1, genera 5.2</span><span class="pill pill--warn">+1</span></div>
-    <div class="row"><span class="row__k">Scena 6</span><span class="row__v">2 clip (48–58s) · hai 6.1, genera 6.2</span><span class="pill pill--warn">+1</span></div>
-    <div class="row"><span class="row__k">Scena 7</span><span class="row__v">2 clip (58–67s) · hai 7.1, genera 7.2</span><span class="pill pill--warn">+1</span></div>
-    <div class="row"><span class="row__k">Scena 8</span><span class="row__v">2 clip (67–75s) · hai 8.1, genera 8.2</span><span class="pill pill--warn">+1</span></div>
-    <div class="row"><span class="row__k">Scena 9</span><span class="row__v">1 clip (75–82s) · hai già</span><span class="pill pill--done">CTA</span></div>
-  </div>
-</section>
-
-<!-- ════════════ VIDEO 2 ════════════ -->
-<section id="page-video2" class="page">
-  <div class="stepper-wrap"><nav class="stepper" data-video="v2"></nav></div>
-  <div class="phead">
-    <div class="phead__row">
-      <div>
-        <div class="phead__eyebrow">Video 02 · Dark psychology</div>
-        <div class="phead__title">The Fawn Response</div>
-        <div class="phead__sub">Perché ti scusi anche quando non hai fatto niente di sbagliato. Topic #1 della banca · 9 scene / 16 clip · da produrre.</div>
-      </div>
-      <span class="pill pill--iris" data-scene-count="v2">— scene</span>
-    </div>
-  </div>
-
-  <!-- COVER -->
-  <div class="cover">
-    <div class="cover__head">
-      <span class="cover__badge">▶ Copertina</span>
-      <div>
-        <div class="cover__title">Il frame che ferma lo scroll</div>
-        <div class="cover__sub">Higgsfield scrive il testo dentro l'immagine. Formula virale: volto in primo piano, sfondo a tinta unita acceso, testo sopra bianco + sotto giallo enorme. Rigenera finché il testo è corretto.</div>
-      </div>
-    </div>
-    <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Prompt copertina <span class="spec">📐 9:16 · testo + stile inclusi</span></div>
-    <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>Vertical 9:16 viral psychology thumbnail.
-
-&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; center frame, medium close-up, eyes wide open looking directly into camera with an anxious, caught expression — like she just realized she apologizes for everything. Mouth slightly open. High energy.
-
-Background: bold solid electric blue (#1E6FE8), slightly gradient toward dark blue at the edges. Vivid, saturated, eye-catching.
-
-Text overlay, Montserrat ExtraBold all caps, perfectly sharp:
-- TOP: "WHY YOU ALWAYS" in large white letters, thick black outline, wide letter-spacing.
-- CENTER BOTTOM (below face): "SAY SORRY" in massive bright yellow letters, even larger, thick black outline.
-
-No shadows. High contrast. Colors: blue background, white + yellow text. Clean, bold, scroll-stopping. Photorealistic face.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-    <div class="field-label">Testo in copertina <span class="faint">— già incluso nel prompt sopra</span></div>
-    <div class="copy-wrap"><div class="cover-text" data-copy-src>WHY YOU ALWAYS <span class="hl">SAY SORRY</span></div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-    <div class="tip gold">Formula (già nel prompt): sfondo a tinta unita acceso, volto in primo piano con occhi spalancati, testo Montserrat ExtraBold MAIUSCOLO — riga sopra <b>bianca</b>, riga sotto <b>gialla enorme</b>, outline nero spesso, niente ombre. Se cambi le parole, modificale <b>dentro il prompt</b>. Alternative: "IT WAS NEVER YOUR FAULT" · "STOP APOLOGIZING" · "YOUR BRAIN LEARNED THIS".</div>
-    <div class="check" data-action="check" data-check="v2.cover.done"><div class="check__box">✓</div><div class="check__txt">Copertina generata e testo aggiunto</div></div>
-  </div>
-
-  <!-- STAGE 1 SCRIPT -->
-  <div class="stage open" data-video="v2" data-stage="script">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">1</div>
-      <div class="stage__meta"><div class="stage__title">Topic & Script</div><div class="stage__hint">Hook → Bridge → Core (fawn response) → Close</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="field-label">Script completo <span class="faint">— ~82s reali con il pacing di ElevenLabs</span></div>
-      <div class="copy-wrap">
-        <div class="prompt lang" data-copy-src>[0–4s] You apologized again. For something that wasn't even your fault.
-
-[4–14s] Maybe someone bumped into you, and you said sorry. Maybe a friend was cold all day, and you spent the night wondering what you did wrong. Maybe you smoothed things over before anyone even raised their voice.
-
-[14–24s] You weren't keeping the peace. You were managing a threat. And some part of you learned to do it long before you could choose.
-
-[24–37s] There's a name for this. Therapist Pete Walker called it the fawn response. Most people know fight, flight, and freeze. Fawn is the fourth one — when your nervous system decides the safest thing to do with danger is to please it.
-
-[37–48s] Think of a small animal that can't run and can't win. So it goes soft. It makes itself agreeable, harmless, easy to like. Your apology is that same instinct, wearing human clothes.
-
-[48–58s] That's why it's automatic. You're not weak, and you're not too sensitive. You're running a survival strategy that once kept you safe — with people who aren't dangerous anymore.
-
-[58–67s] So when you over-apologize, you're not being polite. You're flinching. Treating a frown like a raised hand.
-
-[67–75s] The apology was never about being wrong. It was about staying safe. And safe and wrong are not the same thing.
-
-[75–82s] Drop this in the comments: what's something you say sorry for that you know — deep down — was never your fault?</div>
-        <button class="copy-btn" data-action="copy" title="Copia" aria-label="Copia">⧉</button>
-      </div>
-      <div class="tip gold">⭐ Termine chiave da mostrare in giallo: <span class="term">fawn response</span> — il beat 24–31s. Studioso citato: Pete Walker (la "quarta risposta", oltre a fight / flight / freeze). Angolo umano: il reframe finale "safe and wrong are not the same thing".</div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v2" data-stage="script">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 2 VOICE -->
-  <div class="stage" data-video="v2" data-stage="voice">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">2</div>
-      <div class="stage__meta"><div class="stage__title">Voce</div><div class="stage__hint">ElevenLabs · Liam · annota la durata reale</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="row"><span class="row__k">Voce</span><span class="row__v">Liam — Viral Short-Form Storyteller</span></div>
-      <div class="row"><span class="row__k">Modello</span><span class="row__v">Eleven v3 · Normale · Stability ~45% · Similarity 75%</span></div>
-      <div class="field-label">Durata reale dell'audio generato</div>
-      <input class="inp" data-field="v2.field.voDur" placeholder="es. 82"> <span class="muted" style="font-size:12px">secondi — su questo rimappi i timestamp delle scene</span>
-      <div class="tip">Aggiungi i <code>&lt;break time="0.5s" /&gt;</code> tra i blocchi. Se la durata reale è diversa da 82s, sposta i timestamp delle scene di conseguenza.</div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v2" data-stage="voice">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 3 SCENES -->
-  <div class="stage" data-video="v2" data-stage="scenes">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">3</div>
-      <div class="stage__meta"><div class="stage__title">Scene & Clip</div><div class="stage__hint">Ogni prompt ha la sua icona copia · spunta le scene fatte</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-
-      <!-- SCENE 1 -->
-      <div class="scene" data-video="v2" data-scene="s1">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">0–4s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 1 — Hook: la scusa automatica</div><div class="scene__sub">"You apologized again. For something that wasn't even your fault."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Immagine <span class="spec">📐 9:16</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; standing in a plain room, caught in the middle of a small, reflexive apology. Shoulders drawing inward, a faint apologetic half-smile that doesn't reach her eyes, one hand lifting slightly in a placating gesture. Cold soft light, desaturated. Cinematic, shallow depth of field. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Animazione <span class="spec">⏱ genera 4s → taglia a 3s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Very slow push-in toward her face as she gives a tiny automatic nod and an apologetic flinch of a smile. Barely there. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Questo è il volto del "sorry" automatico. L'hook deve fermare lo scroll: taglia a 3s tenendo il micro-flinch del sorriso.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s1">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 2a -->
-      <div class="scene scene--alt" data-video="v2" data-scene="s2a">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">4–7s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 2a — Ti urtano, ti scusi tu</div><div class="scene__sub">"Maybe someone bumped into you, and you said sorry."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Immagine <span class="spec">📐 9:16 · clip 1.5–2s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; on a busy sidewalk, a stranger brushes past and bumps her shoulder. Her instant reaction is to raise a hand and apologize — even though it wasn't her fault. Mild, reflexive, automatic. Cool city light, slightly desaturated. Close on her face and gesture. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Animazione <span class="spec">⏱ genera 4s → usa 1.5–2s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Quick handheld moment: the bump, then her immediate apologetic hand-raise and a silent "sorry" mouth shape. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Clip breve. Genera 4s e scegli l'istante esatto del "sorry".</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s2a">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 2b -->
-      <div class="scene" data-video="v2" data-scene="s2b">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">7–11s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 2b — L'amica fredda tutto il giorno</div><div class="scene__sub">"Maybe a friend was cold all day, and you spent the night wondering what you did wrong."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Immagine <span class="spec">📐 9:16 · clip 2s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; sitting across a table from a friend who looks away, distant and cold. Sara searches the friend's face, anxious, quietly replaying what she might have done wrong. Warm but desaturated café light. Face visible. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Animazione <span class="spec">⏱ genera 4s → usa 2s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Camera holds on Sara as her eyes scan the other person, brow tightening with worry. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s2b">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 2c -->
-      <div class="scene scene--alt" data-video="v2" data-scene="s2c">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">11–14s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 2c — Calmi tutto prima che alzino la voce</div><div class="scene__sub">"Maybe you smoothed things over before anyone even raised their voice."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Immagine <span class="spec">📐 9:16 · clip 2s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; standing between two tense people in a room, hands slightly raised in a calming, placating gesture, stepping in to smooth things over before anyone raises their voice. Cool desaturated light. Cinematic. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> Animazione <span class="spec">⏱ genera 4s → usa 2s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Slow drift toward Sara's placating hands and her careful, watchful expression. 4 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s2c">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 3 -->
-      <div class="scene" data-video="v2" data-scene="s3">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">14–24s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 3 — Non era pace, era gestire una minaccia <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"You weren't keeping the peace. You were managing a threat..."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 3.1 — "You weren't keeping the peace..." <span class="spec">~5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; alone afterward, leaning against a wall, the social mask dropping. The exhaustion of someone who has been scanning a room for danger all day. Dim cold light. Desaturated. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Very slow push-in as her performed calm fades into quiet vigilance. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 3.2 — "...learned long before you could choose" <span class="spec">~5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; seen small in the frame, sitting on the floor of a large dim hallway, making herself smaller, knees drawn close. A sense of an old habit formed long ago. No other people. Soft side light. Desaturated, near monochrome. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Camera slowly pulls back, making her look smaller in the empty space. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Lo stacco cade su "managing a threat". L'idea dell'infanzia si rende con lo spazio vuoto e il farsi piccola — niente minori nel frame.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s3">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 4a -->
-      <div class="scene scene--alt" data-video="v2" data-scene="s4a">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">24–31s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 4a — Il nome: Pete Walker & fawn response <span class="pill pill--gold" style="margin-left:4px">⭐ chiave</span></div><div class="scene__sub">"There's a name for this. Therapist Pete Walker called it the fawn response."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 4a <span class="spec">📐 9:16 · ~7s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; sitting at a table, slowly lifting her gaze — the moment of recognition, like someone just named something she has done her whole life without a word for it. Quiet relief mixed with understanding. Soft warm light from one side. Slightly desaturated. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Very slow push-in toward her face as heaviness shifts into a quiet moment of clarity. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip gold">⭐ MOMENTO CHIAVE: fai apparire "FAWN RESPONSE" in giallo grande mentre la voce lo pronuncia. È la parola che le persone screenshottano.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s4a">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 4b -->
-      <div class="scene" data-video="v2" data-scene="s4b">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">31–37s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 4b — La quarta risposta: please the danger</div><div class="scene__sub">"Fawn is the fourth one — your nervous system decides the safest thing to do with danger is to please it."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 4b <span class="spec">📐 9:16 · ~6s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; standing still, calm but quietly alert, a faint abstract pattern of light around her suggesting the nervous system. The idea of a fourth option beyond fight, flight, freeze. Cool blue and violet tones. Cinematic. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Subtle and slow. The faint light settles around her once. She stays still. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">In CapCut puoi mostrare "FIGHT · FLIGHT · FREEZE · FAWN" e accendere in giallo solo "FAWN" mentre la voce lo dice.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s4b">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 5 ANIMAL METAPHOR -->
-      <div class="scene scene--alt" data-video="v2" data-scene="s5">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">37–48s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 5 — L'animale che si fa morbido (metafora) <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"Think of a small animal that can't run and can't win. So it goes soft."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="note note--done" style="margin-bottom:12px"><span class="ic">◆</span><div>Unica scena <b>senza Sara</b>. Oggetti/animali → Google Flow / Veo 3.</div></div>
-            <div class="field-label"><span class="toolbadge tb-f">Flow / Veo 3</span> CLIP 5.1 — "...a small animal that can't run" <span class="spec">~5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--clip" data-copy-src>Extreme close-up of a small wild animal — a young deer — frozen completely still in tall grass at dusk, unable to run. Wide, fearful eye, body rigid. Cinematic macro, slow motion. Cool blue-grey desaturated tones. No people. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Primo clip: stabilisce l'animale che non può scappare.</div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-f">Flow / Veo 3</span> CLIP 5.2 — "So it goes soft. It makes itself agreeable" <span class="spec">~6s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--clip" data-copy-src>The same small deer slowly lowers its head and softens its posture, making itself small and non-threatening, ears gently flattening. A gesture of surrender, not aggression. Cinematic slow motion. Cool desaturated tones. No people. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">"Going soft" = il fawn. Lo stacco cade su "So it goes soft" — il visual segue la frase.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s5">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 6 -->
-      <div class="scene" data-video="v2" data-scene="s6">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">48–58s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 6 — È automatico: una strategia di sopravvivenza <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"You're running a survival strategy that once kept you safe — with people who aren't dangerous anymore."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 6.1 — "That's why it's automatic. You're not weak..." <span class="spec">~5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; giving the same small apologetic gesture as the opening, but now the camera lingers — we understand it isn't politeness, it's reflex. Cold soft light. Desaturated. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Slow push-in on the automatic gesture, then her face as she notices herself doing it. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Richiama il gesto dell'hook: ora lo capiamo come riflesso, non cortesia.</div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 6.2 — "...people who aren't dangerous anymore" <span class="spec">~5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; standing in a calm, safe, ordinary room with soft daylight — visibly safe surroundings — yet her body still carries an old wary tension. The mismatch between a safe present and a wired body. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Static gentle shot; her shoulders slowly, only partly, release. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Il contrasto è il punto: ambiente sicuro, corpo ancora in allerta. Lo stacco cade su "survival strategy".</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s6">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 7 -->
-      <div class="scene scene--alt" data-video="v2" data-scene="s7">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">58–67s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 7 — Non sei gentile, stai trasalendo <span class="pill" style="margin-left:4px">2 clip</span></div><div class="scene__sub">"You're flinching. Treating a frown like a raised hand."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 7.1 — "You're not being polite. You're flinching." <span class="spec">~5s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; close-up, a tiny involuntary flinch crossing her face as someone off-screen frowns at her. The micro-flinch of bracing for impact. Dramatic cold side light. Desaturated. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Hold on her face; one small, quick flinch, then a forced soft smile. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-          </div>
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-f">Flow / Veo 3</span> CLIP 7.2 — "Treating a frown like a raised hand" <span class="spec">~5s · astratto</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--clip" data-copy-src>Abstract cinematic shot: a faint disapproving frown on a dimly lit face, and its shadow on the wall slowly grows into the looming shape of a raised hand. The mind mistaking displeasure for danger. Dark blue and violet tones. Slow, subtle. Only shadow — no violence shown. 5 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Visualizza letteralmente "a frown like a raised hand" con l'ombra che incombe. Niente violenza esplicita, solo l'ombra. Lo stacco cade sulla frase.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s7">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 8 -->
-      <div class="scene" data-video="v2" data-scene="s8">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">67–75s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 8 — Sicuro e sbagliato non sono la stessa cosa</div><div class="scene__sub">"The apology was never about being wrong. It was about staying safe."</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 8 <span class="spec">📐 9:16 · ~7s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; standing a little taller, the apology not coming this time. A quiet, steady understanding on her face — the difference between staying safe and being wrong. Soft balanced light, slightly less desaturated than before. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>Very slow push-in. She holds still, calm, choosing not to apologize. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">Primo momento in cui Sara NON si scusa. La luce un filo più calda segna la presa di coscienza.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s8">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <!-- SCENE 9 CTA -->
-      <div class="scene scene--alt" data-video="v2" data-scene="s9">
-        <div class="scene__head" data-action="scene-toggle">
-          <span class="scene__time">75–82s</span>
-          <div class="scene__meta"><div class="scene__title">Scena 9 — Sara guarda in camera <span class="pill pill--done" style="margin-left:4px">CTA</span></div><div class="scene__sub">"What's something you say sorry for that you know was never your fault?"</div></div>
-          <span class="scene__chev">▾</span>
-        </div>
-        <div class="scene__body">
-          <div class="scene__block">
-            <div class="field-label"><span class="toolbadge tb-h">Higgsfield</span> CLIP 9 <span class="spec">📐 9:16 · ~7s</span></div>
-            <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; looking directly into camera for the first time. Calm, knowing, a little vulnerable — asking something personal because she has lived it. Soft front light. Neutral background. Eyes steady. Medium close-up. Vertical 9:16. Photorealistic.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="copy-wrap"><div class="prompt prompt--anim" data-copy-src>No camera movement. She holds the gaze into camera. Subtle breath. Complete stillness. 6 seconds.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-            <div class="tip">La stillness finale chiude il video come nel Video 1. Se serve 1s in più, freeze frame in CapCut.</div>
-          </div>
-          <div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="v2" data-scene="s9">✓ Segna scena fatta</button></div>
-        </div>
-      </div>
-
-      <div class="note note--iris" style="margin-top:14px"><span class="ic">◆</span><div><b>16 clip totali da generare:</b> 13 con Higgsfield (Sara) + 3 con Flow/Veo 3 (cervo metafora 5.1/5.2 e l'ombra astratta 7.2). Ogni stacco di clip cade su un punto preciso del voiceover.</div></div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v2" data-stage="scenes">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 4 EDIT -->
-  <div class="stage" data-video="v2" data-stage="edit">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">4</div>
-      <div class="stage__meta"><div class="stage__title">Montaggio</div><div class="stage__hint">CapCut · caption word-by-word · termine in giallo</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="check" data-action="check" data-check="v2.edit.base"><div class="check__box">✓</div><div class="check__txt">Voiceover come traccia base, clip allineati ai timestamp reali</div></div>
-      <div class="check" data-action="check" data-check="v2.edit.caption"><div class="check__box">✓</div><div class="check__txt">Caption word-by-word Montserrat Bold, bianco con outline nero</div></div>
-      <div class="check" data-action="check" data-check="v2.edit.term"><div class="check__box">✓</div><div class="check__txt">"FAWN RESPONSE" in giallo grande sul beat 24–31s</div></div>
-      <div class="check" data-action="check" data-check="v2.edit.music"><div class="check__box">✓</div><div class="check__txt">Musica dark emotional ambient a 8–10%</div></div>
-      <div class="check" data-action="check" data-check="v2.edit.intro"><div class="check__box">✓</div><div class="check__txt">Intro 0.5s colore brand + nome canale prima dell'hook</div></div>
-      <div class="check" data-action="check" data-check="v2.edit.angle"><div class="check__box">✓</div><div class="check__txt">Angolo umano: cambiate 1-2 frasi dello script AI (anti-demonetizzazione)</div></div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v2" data-stage="edit">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 5 PUBLISH -->
-  <div class="stage" data-video="v2" data-stage="publish">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">5</div>
-      <div class="stage__meta"><div class="stage__title">Pubblica</div><div class="stage__hint">Export · titolo · hashtag · 3 piattaforme</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="row"><span class="row__k">Export</span><span class="row__v">1080×1920 · 60fps · MP4</span></div>
-      <div class="field-label">Titolo <span class="faint">— con il nome scientifico, ≤60 caratteri</span></div>
-      <div class="copy-wrap"><div class="prompt lang" data-copy-src>The fawn response: why you apologize for nothing</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-      <div class="field-label">Hashtag</div>
-      <div class="copy-wrap"><div class="prompt" data-copy-src>#psychology #fawnresponse #peoplepleasing #traumaresponse #boundaries</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-      <div style="margin-top:16px">
-        <div class="check" data-action="check" data-check="v2.pub.yt"><div class="check__box">✓</div><div class="check__txt">Pubblicato su YouTube Shorts</div></div>
-        <div class="check" data-action="check" data-check="v2.pub.tk"><div class="check__box">✓</div><div class="check__txt">Pubblicato su TikTok</div></div>
-        <div class="check" data-action="check" data-check="v2.pub.ig"><div class="check__box">✓</div><div class="check__txt">Pubblicato su Instagram Reels</div></div>
-      </div>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v2" data-stage="publish">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <!-- STAGE 6 ANALYZE -->
-  <div class="stage" data-video="v2" data-stage="analyze">
-    <div class="stage__head" data-action="stage-toggle">
-      <div class="stage__no">6</div>
-      <div class="stage__meta"><div class="stage__title">Analisi</div><div class="stage__hint">2 ore di commenti + retention dopo 48h</div></div>
-      <span class="stage__state">—</span><span class="stage__chev">▾</span>
-    </div>
-    <div class="stage__body">
-      <div class="check" data-action="check" data-check="v2.an.comments"><div class="check__box">✓</div><div class="check__txt">Risposto a ogni commento nelle prime 2 ore</div></div>
-      <div class="field-label">Retention media dopo 48h</div>
-      <input class="inp" data-field="v2.field.retention" placeholder="es. 62"> <span class="muted" style="font-size:12px">% — sopra 65% = formato vincente · sotto 50% = problema nell'hook</span>
-      <div class="field-label">Spunti dai commenti per i prossimi video</div>
-      <textarea class="inp wide" data-field="v2.field.notes" placeholder="Le storie nei commenti sul 'scusarsi per niente' sono i prossimi topic."></textarea>
-      <div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="v2" data-stage="analyze">✓ Fatto</button></div>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-  <div class="sec-title">Riepilogo clip</div>
-  <div class="card">
-    <div class="row"><span class="row__k">Scena 1</span><span class="row__v">1 clip (0–4s) · Higgsfield</span><span class="pill pill--iris">Hook</span></div>
-    <div class="row"><span class="row__k">Scene 2a/2b/2c</span><span class="row__v">3 clip (4–14s) · Higgsfield</span><span class="pill pill--gold">Flash cut</span></div>
-    <div class="row"><span class="row__k">Scena 3</span><span class="row__v">2 clip (14–24s) · Higgsfield</span><span class="pill pill--iris">Bridge</span></div>
-    <div class="row"><span class="row__k">Scena 4a</span><span class="row__v">1 clip (24–31s) · Higgsfield</span><span class="pill pill--gold">Il nome ⭐</span></div>
-    <div class="row"><span class="row__k">Scena 4b</span><span class="row__v">1 clip (31–37s) · Higgsfield</span><span class="pill pill--iris">La quarta</span></div>
-    <div class="row"><span class="row__k">Scena 5</span><span class="row__v">2 clip (37–48s) · Flow/Veo 3</span><span class="pill pill--done">Metafora</span></div>
-    <div class="row"><span class="row__k">Scena 6</span><span class="row__v">2 clip (48–58s) · Higgsfield</span><span class="pill pill--iris">Survival</span></div>
-    <div class="row"><span class="row__k">Scena 7</span><span class="row__v">2 clip (58–67s) · Higgsfield + Veo (7.2)</span><span class="pill pill--iris">Flinch</span></div>
-    <div class="row"><span class="row__k">Scena 8</span><span class="row__v">1 clip (67–75s) · Higgsfield</span><span class="pill pill--gold">Reframe</span></div>
-    <div class="row"><span class="row__k">Scena 9</span><span class="row__v">1 clip (75–82s) · Higgsfield</span><span class="pill pill--done">CTA</span></div>
-  </div>
-  <div class="note note--gold" style="margin-top:12px"><span class="ic">⚡</span><div>Tutto da generare da zero. Ordine consigliato: prima i 13 clip Higgsfield con Sara (stesso Reference Element del Video 1), poi i 3 clip Flow/Veo 3. Annota la durata reale del voiceover nello stadio <b>Voce</b> prima di tagliare le scene.</div></div>
-</section>
+<!-- ═══ VIDEO PAGES (render da videos/*.js) ═══ -->
+<div id="video-pages"></div>
 
 <!-- ════════════ NUOVO VIDEO (TEMPLATE) ════════════ -->
 <section id="page-newvideo" class="page">
@@ -1267,7 +410,7 @@ No shadows. High contrast. Colors: blue background, white + yellow text. Clean, 
     <div class="phead__sub">La pipeline è sempre questa. Per creare il prossimo video, dimmi il topic (o pescalo dalla Banca Topic) e lo riempio scena per scena come il Video 1.</div>
   </div>
 
-  <div class="note note--iris" style="margin-bottom:20px"><span class="ic">◆</span><div>Quando lavori con Claude Code, scrivi: <b>"Aggiungiamo il Video N. Topic: [X]"</b> — duplicherò la struttura del Video 1 e la riempirò con script diviso per timestamp, scene con prompt immagine + animazione (Sara escaped) e riepilogo clip.</div></div>
+  <div class="note note--iris" style="margin-bottom:20px"><span class="ic">◆</span><div>Quando lavori con Claude Code, scrivi: <b>"Aggiungiamo il Video N. Topic: [X]"</b> — creerà un nuovo file in <code>videos/</code> (copia di un video esistente) con copertina, script per timestamp e scene, poi aggiungerà la riga <code>&lt;script src="videos/video-NN.js"&gt;</code>. Studio, sidebar e pipeline si generano da soli.</div></div>
 
   <div class="sec-title"><span class="num">0</span> Copertina</div>
   <div class="card">
@@ -1534,205 +677,277 @@ ANIMAZIONE: [movimento camera: slow push-in / drift / pull-back]. [cosa fa Sara]
 </div><!-- /shell -->
 <div class="toast" id="toast"></div>
 
+<script>window.PSV={videos:[],register:function(v){PSV.videos.push(v);}};</script>
+<script src="videos/video-01-sunk-cost.js"></script>
+<script src="videos/video-02-fawn.js"></script>
 <script>
-/* ───────────────────────── data model ───────────────────────── */
-const STAGES=[
-  {key:'script', label:'Script'},
-  {key:'voice',  label:'Voce'},
-  {key:'scenes', label:'Scene'},
-  {key:'edit',   label:'Montaggio'},
-  {key:'publish',label:'Pubblica'},
-  {key:'analyze',label:'Analisi'}
-];
-const VIDEOS=[
-  {id:'v1', page:'video1', n:1, title:'Sunk Cost Fallacy', kicker:'Bias cognitivo',
-   concept:'Perché finisci cose che ti fanno male, "per non sprecare" ciò che hai già investito.'},
-  {id:'v2', page:'video2', n:2, title:'The Fawn Response', kicker:'Dark psychology',
-   concept:'Perché ti scusi anche quando non hai fatto niente di sbagliato: la quarta risposta al trauma.'}
-];
-function videoByPage(p){return VIDEOS.find(v=>v.page===p)}
-function videoById(id){return VIDEOS.find(v=>v.id===id)}
+/* ═══════════════════════ PsychoShorts — app (data-driven) ═══════════════════════ */
+var STAGES=[{key:'script',label:'Script'},{key:'voice',label:'Voce'},{key:'scenes',label:'Scene'},{key:'edit',label:'Montaggio'},{key:'publish',label:'Pubblica'},{key:'analyze',label:'Analisi'}];
+var VIDEOS=[]; var DEFAULTS={};
 
-/* default state: Video 1 è girato e montato, pronto da pubblicare */
-const DEFAULTS={
-  'v1.stage.script':true,'v1.stage.voice':true,'v1.stage.scenes':true,'v1.stage.edit':true,
-  'v1.stage.publish':false,'v1.stage.analyze':false,
-  'v1.field.voDur':'82'
-};
+function sortedVideos(){return (PSV.videos||[]).slice().sort(function(a,b){return a.n-b.n;});}
+function buildModel(){
+  VIDEOS=sortedVideos().map(function(v){return {id:'v'+v.n,page:'video'+v.n,n:v.n,title:v.title,kicker:v.kicker||'',concept:v.concept||'',data:v};});
+  DEFAULTS={};
+  sortedVideos().forEach(function(v){(v.seed||[]).forEach(function(k){DEFAULTS['v'+v.n+'.stage.'+k]=true;});if(v.voDur)DEFAULTS['v'+v.n+'.field.voDur']=v.voDur;});
+}
+function videoByPage(p){for(var i=0;i<VIDEOS.length;i++)if(VIDEOS[i].page===p)return VIDEOS[i];return null;}
 
-/* ───────────────────────── storage ───────────────────────── */
-const KEY='psychoshorts:v2';
-let state={};
-function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
-function getVal(k){return (k in state)?state[k]:(k in DEFAULTS?DEFAULTS[k]:undefined)}
-function setVal(k,v){state[k]=v;save()}
+/* ───── helpers (pure HTML builders) ───── */
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function copyBox(kind,text){return '<div class="copy-wrap"><div class="prompt prompt--'+kind+'" data-copy-src>'+esc(text)+'</div><button class="copy-btn" data-action="copy" title="Copia" aria-label="Copia">⧉</button></div>';}
+function copyLang(text){return '<div class="copy-wrap"><div class="prompt lang" data-copy-src>'+esc(text)+'</div><button class="copy-btn" data-action="copy" title="Copia" aria-label="Copia">⧉</button></div>';}
+function copyPlain(text){return '<div class="copy-wrap"><div class="prompt" data-copy-src>'+esc(text)+'</div><button class="copy-btn" data-action="copy" title="Copia" aria-label="Copia">⧉</button></div>';}
+function fieldLabel(html){return '<div class="field-label">'+html+'</div>';}
+function tipHtml(html,gold){return '<div class="tip'+(gold?' gold':'')+'">'+html+'</div>';}
+function doneRow(vid,key){return '<div class="stage__done-row"><button class="stage-done-btn" data-action="stage-done" data-video="'+vid+'" data-stage="'+key+'">✓ Fatto</button></div>';}
+function checkItem(key,txt){return '<div class="check" data-action="check" data-check="'+key+'"><div class="check__box">✓</div><div class="check__txt">'+txt+'</div></div>';}
+function stageWrap(vid,key,no,title,hint,body,open){return '<div class="stage'+(open?' open':'')+'" data-video="'+vid+'" data-stage="'+key+'"><div class="stage__head" data-action="stage-toggle"><div class="stage__no">'+no+'</div><div class="stage__meta"><div class="stage__title">'+title+'</div><div class="stage__hint">'+hint+'</div></div><span class="stage__state">—</span><span class="stage__chev">▾</span></div><div class="stage__body">'+body+'</div></div>';}
 
-/* ───────────────────────── navigation ───────────────────────── */
+function clipBlock(c){
+  var badge=c.tool==='f'?'<span class="toolbadge tb-f">Flow / Veo 3</span>':'<span class="toolbadge tb-h">Higgsfield</span>';
+  var h='<div class="scene__block">';
+  h+=fieldLabel(badge+(c.label?' '+c.label:''));
+  if(c.image){if(c.image.spec)h+=fieldLabel(c.image.spec);h+=copyBox('img',c.image.text);}
+  if(c.anim){if(c.anim.spec)h+=fieldLabel(c.anim.spec);h+=copyBox('anim',c.anim.text);}
+  if(c.clip){if(c.clip.spec)h+=fieldLabel(c.clip.spec);h+=copyBox('clip',c.clip.text);}
+  if(c.tip)h+=tipHtml(c.tip,c.gold);
+  return h+'</div>';
+}
+function sceneCard(sc,idx,vid){
+  var alt=idx%2===1?' scene--alt':'';
+  var badges=(sc.badges||[]).map(function(b){return ' <span class="'+(b.cls||'pill')+'" style="margin-left:4px">'+b.txt+'</span>';}).join('');
+  var h='<div class="scene'+alt+'" data-video="'+vid+'" data-scene="'+sc.id+'">';
+  h+='<div class="scene__head" data-action="scene-toggle"><span class="scene__time">'+sc.time+'</span><div class="scene__meta"><div class="scene__title">'+sc.title+badges+'</div><div class="scene__sub">'+sc.sub+'</div></div><span class="scene__chev">▾</span></div>';
+  h+='<div class="scene__body">';
+  if(sc.note)h+='<div class="scene__block"><div class="note note--done"><span class="ic">◆</span><div>'+sc.note+'</div></div></div>';
+  sc.clips.forEach(function(c){h+=clipBlock(c);});
+  h+='<div class="scene__block"><button class="scene-done-btn" data-action="scene-done" data-video="'+vid+'" data-scene="'+sc.id+'">✓ Segna scena fatta</button></div>';
+  return h+'</div></div>';
+}
+function coverBlock(v,vid){
+  var c=v.cover;var alts=(c.alts||[]).map(function(a){return '"'+a+'"';}).join(' · ');
+  var h='<div class="cover">';
+  h+='<div class="cover__head"><span class="cover__badge">▶ Copertina</span><div><div class="cover__title">Il frame che ferma lo scroll</div><div class="cover__sub">Higgsfield scrive il testo dentro l\'immagine. Formula virale: volto in primo piano, sfondo a tinta unita acceso, testo sopra bianco + sotto giallo enorme. Rigenera finché il testo è corretto.</div></div></div>';
+  h+=fieldLabel('<span class="toolbadge tb-h">Higgsfield</span> Prompt copertina <span class="spec">📐 9:16 · testo + stile inclusi</span>');
+  h+=copyBox('img',c.prompt);
+  h+=fieldLabel('Testo in copertina <span class="faint">— già incluso nel prompt sopra</span>');
+  h+='<div class="copy-wrap"><div class="cover-text" data-copy-src>'+esc(c.white)+' <span class="hl">'+esc(c.yellow)+'</span></div><button class="copy-btn" data-action="copy" title="Copia" aria-label="Copia">⧉</button></div>';
+  h+=tipHtml('Formula (già nel prompt): sfondo a tinta unita acceso, volto in primo piano con occhi spalancati, testo Montserrat ExtraBold MAIUSCOLO — riga sopra <b>bianca</b>, riga sotto <b>gialla enorme</b>, outline nero spesso, niente ombre. Se cambi le parole, modificale <b>dentro il prompt</b>. Alternative: '+alts+'.',true);
+  h+=checkItem(vid+'.cover.done','Copertina generata e testo aggiunto');
+  return h+'</div>';
+}
+function scriptStage(v,vid){
+  var txt=v.script.map(function(b){return '['+b[0]+'] '+b[1];}).join('\n\n');
+  var body=fieldLabel('Script completo <span class="faint">— '+(v.scriptNote||'lo script con i timestamp reali')+'</span>')+copyLang(txt);
+  if(v.term)body+=tipHtml('⭐ Termine chiave da mostrare in giallo: <span class="term">'+v.term+'</span> — il beat '+(v.termBeat||'')+' è quello che le persone screenshottano.',true);
+  body+=doneRow(vid,'script');
+  return stageWrap(vid,'script',1,'Topic & Script',(v.scriptHint||'Hook → Bridge → Core → Close'),body,true);
+}
+function voiceStage(v,vid){
+  var body='';
+  if(v.voice&&v.voice.file)body+='<div class="row"><span class="row__k">File</span><span class="row__v">'+v.voice.file+'</span></div>';
+  body+='<div class="row"><span class="row__k">Voce</span><span class="row__v">Liam — Viral Short-Form Storyteller</span></div>';
+  body+='<div class="row"><span class="row__k">Modello</span><span class="row__v">'+((v.voice&&v.voice.settings)||'Eleven v3 · Normale · Stability ~45% · Similarity 75%')+'</span></div>';
+  body+=fieldLabel('Durata reale dell\'audio generato')+'<input class="inp" data-field="'+vid+'.field.voDur" placeholder="es. 82"> <span class="muted" style="font-size:12px">secondi — su questo mappi le scene</span>';
+  body+=tipHtml('ElevenLabs legge a ~60 caratteri/secondo: aggiungi i <code>&lt;break time="0.5s" /&gt;</code> tra i blocchi. Se la durata reale è diversa, sposta i timestamp delle scene di conseguenza.');
+  body+=doneRow(vid,'voice');
+  return stageWrap(vid,'voice',2,'Voce','ElevenLabs · Liam · annota la durata reale',body);
+}
+function scenesStage(v,vid){
+  var body='';
+  v.scenes.forEach(function(sc,i){body+=sceneCard(sc,i,vid);});
+  if(v.scenesNote)body+='<div class="note note--iris" style="margin-top:14px"><span class="ic">◆</span><div>'+v.scenesNote+'</div></div>';
+  body+=doneRow(vid,'scenes');
+  return stageWrap(vid,'scenes',3,'Scene & Clip','Ogni prompt ha la sua icona copia · spunta le scene fatte',body);
+}
+function editStage(v,vid){
+  var term=v.termCaps||(v.term?v.term.toUpperCase():'IL TERMINE');
+  var body=checkItem(vid+'.edit.base','Voiceover come traccia base, clip allineati ai timestamp reali')
+    +checkItem(vid+'.edit.caption','Caption word-by-word Montserrat Bold, bianco con outline nero')
+    +checkItem(vid+'.edit.term','"'+term+'" in giallo grande sul beat '+(v.termBeat||''))
+    +checkItem(vid+'.edit.music','Musica dark emotional ambient a 8–10%')
+    +checkItem(vid+'.edit.intro','Intro 0.5s colore brand + nome canale prima dell\'hook')
+    +checkItem(vid+'.edit.angle','Angolo umano: cambiate 1-2 frasi dello script AI (anti-demonetizzazione)')
+    +doneRow(vid,'edit');
+  return stageWrap(vid,'edit',4,'Montaggio','CapCut · caption word-by-word · termine in giallo',body);
+}
+function publishStage(v,vid){
+  var body='<div class="row"><span class="row__k">Export</span><span class="row__v">1080×1920 · 60fps · MP4</span></div>'
+    +fieldLabel('Titolo <span class="faint">— con il nome scientifico, ≤60 caratteri</span>')+copyLang(v.pubTitle||'')
+    +fieldLabel('Hashtag')+copyPlain(v.hashtags||'')
+    +'<div style="margin-top:16px">'+checkItem(vid+'.pub.yt','Pubblicato su YouTube Shorts')+checkItem(vid+'.pub.tk','Pubblicato su TikTok')+checkItem(vid+'.pub.ig','Pubblicato su Instagram Reels')+'</div>'
+    +doneRow(vid,'publish');
+  return stageWrap(vid,'publish',5,'Pubblica','Export · titolo · hashtag · 3 piattaforme',body);
+}
+function analyzeStage(v,vid){
+  var body=checkItem(vid+'.an.comments','Risposto a ogni commento nelle prime 2 ore')
+    +fieldLabel('Retention media dopo 48h')+'<input class="inp" data-field="'+vid+'.field.retention" placeholder="es. 62"> <span class="muted" style="font-size:12px">% — sopra 65% = formato vincente · sotto 50% = problema nell\'hook</span>'
+    +fieldLabel('Spunti dai commenti per i prossimi video')+'<textarea class="inp wide" data-field="'+vid+'.field.notes" placeholder="Le risposte ai commenti diventano i prossimi topic."></textarea>'
+    +doneRow(vid,'analyze');
+  return stageWrap(vid,'analyze',6,'Analisi','2 ore di commenti + retention dopo 48h',body);
+}
+function summaryBlock(v){
+  var rows=v.scenes.map(function(sc){var n=sc.clips.length;var short=sc.title.split('—')[0].trim();return '<div class="row"><span class="row__k">'+short+'</span><span class="row__v">'+n+' clip · '+sc.time+'</span></div>';}).join('');
+  return '<div class="divider"></div><div class="sec-title">Riepilogo clip</div><div class="card">'+rows+'</div>';
+}
+function stepperNav(vid,page){
+  var nodes=STAGES.map(function(s,i){return '<button class="stnode" data-action="goto" data-page="'+page+'" data-stage="'+s.key+'"><span class="stnode__dot">'+(i+1)+'</span><span class="stnode__lbl">'+s.label+'</span></button>';}).join('');
+  return '<div class="stepper-wrap"><nav class="stepper" data-video="'+vid+'">'+nodes+'</nav></div>';
+}
+function videoPageHTML(v){
+  var vid='v'+v.n,page='video'+v.n,nn=(v.n<10?'0'+v.n:''+v.n);
+  var h='<section id="page-'+page+'" class="page">';
+  h+=stepperNav(vid,page);
+  h+='<div class="phead"><div class="phead__row"><div><div class="phead__eyebrow">Video '+nn+' · '+(v.kicker||'')+'</div><div class="phead__title">'+v.title+'</div><div class="phead__sub">'+(v.sub||v.concept||'')+'</div></div><span class="pill pill--iris" data-scene-count="'+vid+'">— scene</span></div></div>';
+  h+=coverBlock(v,vid);
+  h+=scriptStage(v,vid)+voiceStage(v,vid)+scenesStage(v,vid)+editStage(v,vid)+publishStage(v,vid)+analyzeStage(v,vid);
+  h+=summaryBlock(v);
+  return h+'</section>';
+}
+function renderSidebarVideos(){
+  var el=document.getElementById('nav-videos');if(!el)return;
+  el.innerHTML=sortedVideos().map(function(v){return '<button class="nav__item" data-action="nav" data-page="video'+v.n+'"><span class="nav__ic">'+v.n+'</span>'+v.title+'<span class="nav__dot"></span></button>';}).join('');
+}
+function renderVideoPages(){
+  var el=document.getElementById('video-pages');if(!el)return;
+  el.innerHTML=sortedVideos().map(videoPageHTML).join('');
+}
+
+/* ───── storage ───── */
+var KEY='psychoshorts:v2';
+var state={};
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{};}catch(e){return {};}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+function getVal(k){return (k in state)?state[k]:(k in DEFAULTS?DEFAULTS[k]:undefined);}
+function setVal(k,v){state[k]=v;save();}
+
+/* ───── navigation ───── */
 function switchPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+id));
-  document.querySelectorAll('.nav__item').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+  document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('active',p.id==='page-'+id);});
+  document.querySelectorAll('.nav__item').forEach(function(b){b.classList.toggle('active',b.dataset.page===id);});
   state._lastPage=id;save();
   document.body.classList.remove('nav-open');
 }
-function showPage(id){switchPage(id);openCurrentStage(id);window.scrollTo({top:0,behavior:'smooth'})}
+function showPage(id){switchPage(id);openCurrentStage(id);window.scrollTo({top:0,behavior:'smooth'});}
 function openCurrentStage(page){
-  const v=videoByPage(page); if(!v)return;
-  const ci=firstIncomplete(v);
-  const key=ci<0?STAGES[0].key:STAGES[ci].key;
-  const pageEl=document.getElementById('page-'+page);
-  pageEl.querySelectorAll('.stage').forEach(s=>s.classList.toggle('open',s.dataset.stage===key));
+  var v=videoByPage(page);if(!v)return;
+  var ci=firstIncomplete(v);var key=ci<0?STAGES[0].key:STAGES[ci].key;
+  var pageEl=document.getElementById('page-'+page);if(!pageEl)return;
+  pageEl.querySelectorAll('.stage').forEach(function(s){s.classList.toggle('open',s.dataset.stage===key);});
 }
 function goToStep(page,stage){
   switchPage(page);
-  const pageEl=document.getElementById('page-'+page);
-  const target=pageEl?pageEl.querySelector('.stage[data-stage="'+stage+'"]'):null;
-  if(target){
-    pageEl.querySelectorAll('.stage').forEach(s=>s.classList.remove('open'));
-    target.classList.add('open');
-    setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'start'}),70);
-  }else{window.scrollTo({top:0,behavior:'smooth'})}
+  var pageEl=document.getElementById('page-'+page);
+  var target=pageEl?pageEl.querySelector('.stage[data-stage="'+stage+'"]'):null;
+  if(target){pageEl.querySelectorAll('.stage').forEach(function(s){s.classList.remove('open');});target.classList.add('open');setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'});},70);}
+  else window.scrollTo({top:0,behavior:'smooth'});
 }
 
-/* ───────────────────────── progress helpers ───────────────────────── */
-function stageDone(v,key){return !!getVal(v.id+'.stage.'+key)}
-function firstIncomplete(v){return STAGES.findIndex(s=>!stageDone(v,s.key))}
-function doneCount(v){return STAGES.filter(s=>stageDone(v,s.key)).length}
+/* ───── progress ───── */
+function stageDone(v,key){return !!getVal(v.id+'.stage.'+key);}
+function firstIncomplete(v){for(var i=0;i<STAGES.length;i++)if(!stageDone(v,STAGES[i].key))return i;return -1;}
+function doneCount(v){var n=0;STAGES.forEach(function(s){if(stageDone(v,s.key))n++;});return n;}
 
-/* ───────────────────────── render: steppers ───────────────────────── */
-function renderSteppers(){
-  document.querySelectorAll('.stepper').forEach(nav=>{
-    const v=videoById(nav.dataset.video); if(!v)return;
-    nav.innerHTML=STAGES.map((s,i)=>
-      '<button class="stnode" data-action="goto" data-page="'+v.page+'" data-stage="'+s.key+'">'+
-      '<span class="stnode__dot">'+(i+1)+'</span><span class="stnode__lbl">'+s.label+'</span></button>'
-    ).join('');
-  });
-}
-
-/* ───────────────────────── render: studio ───────────────────────── */
+/* ───── studio ───── */
 function studioCardHTML(v){
-  const done=doneCount(v), pct=Math.round(done/STAGES.length*100), ci=firstIncomplete(v);
-  const complete=ci<0;
-  const status=complete?'Completato':(stageDone(v,'edit')&&!stageDone(v,'publish')?'Pronto da pubblicare':'In produzione');
-  const next=complete?'':STAGES[ci].label;
-  const segs=STAGES.map((s,i)=>'<span class="seg'+(stageDone(v,s.key)?' done':'')+(i===ci?' cur':'')+'"></span>').join('');
-  const stage=complete?STAGES[STAGES.length-1].key:STAGES[ci].key;
-  return '<div class="vcard">'+
-    '<div class="vcard__top"><span class="vcard__no">VIDEO '+String(v.n).padStart(2,'0')+'</span>'+
-    '<span class="pill '+(complete?'pill--done':'pill--prod')+'">'+status+'</span></div>'+
-    '<div class="vcard__title">'+v.title+'</div>'+
-    '<div class="vcard__concept">'+v.concept+'</div>'+
-    '<div class="reel">'+segs+'</div>'+
-    '<div class="vcard__foot"><span class="vcard__pct">'+pct+'%'+(complete?'':' · prossimo: <b>'+next+'</b>')+'</span>'+
-    '<button class="btn btn--gold" data-action="goto" data-page="'+v.page+'" data-stage="'+stage+'">'+(complete?'Rivedi':'Continua')+' →</button></div>'+
-    '</div>';
+  var done=doneCount(v),pct=Math.round(done/STAGES.length*100),ci=firstIncomplete(v),complete=ci<0;
+  var status=complete?'Completato':(stageDone(v,'edit')&&!stageDone(v,'publish')?'Pronto da pubblicare':'In produzione');
+  var next=complete?'':STAGES[ci].label;
+  var segs=STAGES.map(function(s,i){return '<span class="seg'+(stageDone(v,s.key)?' done':'')+(i===ci?' cur':'')+'"></span>';}).join('');
+  var stage=complete?STAGES[STAGES.length-1].key:STAGES[ci].key;
+  return '<div class="vcard"><div class="vcard__top"><span class="vcard__no">VIDEO '+String(v.n).padStart(2,'0')+'</span><span class="pill '+(complete?'pill--done':'pill--prod')+'">'+status+'</span></div>'
+    +'<div class="vcard__title">'+v.title+'</div><div class="vcard__concept">'+v.concept+'</div><div class="reel">'+segs+'</div>'
+    +'<div class="vcard__foot"><span class="vcard__pct">'+pct+'%'+(complete?'':' · prossimo: <b>'+next+'</b>')+'</span>'
+    +'<button class="btn btn--gold" data-action="goto" data-page="'+v.page+'" data-stage="'+stage+'">'+(complete?'Rivedi':'Continua')+' →</button></div></div>';
 }
+function setText(id,t){var e=document.getElementById(id);if(e)e.textContent=t;}
 function renderStudio(){
-  // KPI
-  const total=VIDEOS.length;
-  const pub=VIDEOS.filter(v=>stageDone(v,'publish')).length;
-  const durs=VIDEOS.map(v=>parseInt(getVal(v.id+'.field.voDur'),10)).filter(n=>!isNaN(n));
-  const avg=durs.length?Math.round(durs.reduce((a,b)=>a+b,0)/durs.length):null;
-  setText('kpiTotal',total);
-  setText('kpiPub',pub);
-  setText('kpiDur',avg?('~'+avg+'s'):'—');
-  // cards
-  const grid=document.getElementById('studioGrid');
-  grid.innerHTML=VIDEOS.map(studioCardHTML).join('')+
-    '<div class="vcard vcard--new" data-action="nav" data-page="newvideo"><div class="plus">+</div><div class="fw5">Nuovo video</div><div class="faint" style="font-size:12px">pesca un topic dalla banca</div></div>';
-  // sidebar "now" dot
-  VIDEOS.forEach(v=>{
-    const item=document.querySelector('.nav__item[data-page="'+v.page+'"]');
-    if(item)item.classList.toggle('has-now',firstIncomplete(v)>=0);
-  });
+  var total=VIDEOS.length;
+  var pub=VIDEOS.filter(function(v){return stageDone(v,'publish');}).length;
+  var durs=VIDEOS.map(function(v){return parseInt(getVal(v.id+'.field.voDur'),10);}).filter(function(n){return !isNaN(n);});
+  var avg=durs.length?Math.round(durs.reduce(function(a,b){return a+b;},0)/durs.length):null;
+  setText('kpiTotal',total);setText('kpiPub',pub);setText('kpiDur',avg?('~'+avg+'s'):'—');
+  var grid=document.getElementById('studioGrid');if(!grid)return;
+  grid.innerHTML=VIDEOS.map(studioCardHTML).join('')
+    +'<div class="vcard vcard--new" data-action="nav" data-page="newvideo"><div class="plus">+</div><div class="fw5">Nuovo video</div><div class="faint" style="font-size:12px">pesca un topic dalla banca</div></div>';
+  VIDEOS.forEach(function(v){var item=document.querySelector('.nav__item[data-page="'+v.page+'"]');if(item)item.classList.toggle('has-now',firstIncomplete(v)>=0);});
 }
-function setText(id,t){const e=document.getElementById(id);if(e)e.textContent=t}
 
-/* ───────────────────────── recompute everything from state ───────────────────────── */
+/* ───── recompute everything from state ───── */
 function recompute(){
-  VIDEOS.forEach(v=>{
-    const ci=firstIncomplete(v);
-    // stepper nodes
-    document.querySelectorAll('.stepper[data-video="'+v.id+'"] .stnode').forEach((node,i)=>{
-      node.classList.toggle('done',stageDone(v,STAGES[i].key));
-      node.classList.toggle('current',i===ci);
+  VIDEOS.forEach(function(v){
+    var ci=firstIncomplete(v);
+    document.querySelectorAll('.stepper[data-video="'+v.id+'"] .stnode').forEach(function(node,i){
+      node.classList.toggle('done',stageDone(v,STAGES[i].key));node.classList.toggle('current',i===ci);});
+    STAGES.forEach(function(s,i){
+      var sec=document.querySelector('.stage[data-video="'+v.id+'"][data-stage="'+s.key+'"]');if(!sec)return;
+      var done=stageDone(v,s.key);sec.classList.toggle('done',done);
+      var btn=sec.querySelector('[data-action="stage-done"]');if(btn)btn.textContent=done?'↩ Da rifare':'✓ Fatto';
+      var st=sec.querySelector('.stage__state');if(st){st.textContent=done?'Completato':(i===ci?'Da fare ora':'In attesa');st.className='stage__state '+(done?'is-done':(i===ci?'is-now':''));}
     });
-    // stage sections
-    STAGES.forEach((s,i)=>{
-      const sec=document.querySelector('.stage[data-video="'+v.id+'"][data-stage="'+s.key+'"]');
-      if(!sec)return;
-      const done=stageDone(v,s.key);
-      sec.classList.toggle('done',done);
-      const btn=sec.querySelector('[data-action="stage-done"]');
-      if(btn)btn.textContent=done?'↩ Da rifare':'✓ Fatto';
-      const st=sec.querySelector('.stage__state');
-      if(st){st.textContent=done?'Completato':(i===ci?'Da fare ora':'In attesa');
-        st.className='stage__state '+(done?'is-done':(i===ci?'is-now':''));}
-    });
-    // scenes
-    const scenes=document.querySelectorAll('.scene[data-video="'+v.id+'"]');
-    let sd=0;
-    scenes.forEach(sc=>{
-      const done=!!getVal(v.id+'.scene.'+sc.dataset.scene);
-      sc.classList.toggle('done',done); if(done)sd++;
-      const b=sc.querySelector('[data-action="scene-done"]');
-      if(b)b.textContent=done?'↩ Scena da rifare':'✓ Segna scena fatta';
-    });
-    const cnt=document.querySelector('[data-scene-count="'+v.id+'"]');
-    if(cnt&&scenes.length)cnt.textContent=sd+' / '+scenes.length+' scene';
+    var scenes=document.querySelectorAll('.scene[data-video="'+v.id+'"]');var sd=0;
+    scenes.forEach(function(sc){var done=!!getVal(v.id+'.scene.'+sc.dataset.scene);sc.classList.toggle('done',done);if(done)sd++;
+      var b=sc.querySelector('[data-action="scene-done"]');if(b)b.textContent=done?'↩ Scena da rifare':'✓ Segna scena fatta';});
+    var cnt=document.querySelector('[data-scene-count="'+v.id+'"]');if(cnt&&scenes.length)cnt.textContent=sd+' / '+scenes.length+' scene';
   });
   renderStudio();
 }
 
-/* ───────────────────────── actions ───────────────────────── */
-function markStage(vid,key){const k=vid+'.stage.'+key;setVal(k,!getVal(k));recompute();toast(getVal(k)?'Step completato':'Step riaperto')}
-function markScene(vid,sid){const k=vid+'.scene.'+sid;setVal(k,!getVal(k));recompute()}
-function toggleCheck(el){const k=el.dataset.check;const nv=!getVal(k);setVal(k,nv);el.classList.toggle('done',nv)}
+/* ───── actions ───── */
+function markStage(vid,key){var k=vid+'.stage.'+key;setVal(k,!getVal(k));recompute();toast(getVal(k)?'Step completato':'Step riaperto');}
+function markScene(vid,sid){var k=vid+'.scene.'+sid;setVal(k,!getVal(k));recompute();}
+function toggleCheck(el){var k=el.dataset.check;var nv=!getVal(k);setVal(k,nv);el.classList.toggle('done',nv);}
 function copyFrom(btn){
-  const src=btn.closest('.copy-wrap').querySelector('[data-copy-src]');
-  const text=src?src.textContent.trim():'';
-  const ok=()=>{btn.classList.add('ok');btn.textContent='✓';toast('Copiato negli appunti');
-    setTimeout(()=>{btn.classList.remove('ok');btn.textContent='⧉'},1600)};
-  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(ok).catch(()=>fallbackCopy(text,ok))}
+  var src=btn.closest('.copy-wrap').querySelector('[data-copy-src]');
+  var text=src?src.textContent.trim():'';
+  var ok=function(){btn.classList.add('ok');btn.textContent='✓';toast('Copiato negli appunti');setTimeout(function(){btn.classList.remove('ok');btn.textContent='⧉';},1600);};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text).then(ok).catch(function(){fallbackCopy(text,ok);});
   else fallbackCopy(text,ok);
 }
-function fallbackCopy(text,ok){const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok()}catch(e){}document.body.removeChild(ta)}
-let toastT;
-function toast(msg){const t=document.getElementById('toast');t.innerHTML='<span class="dot">●</span> '+msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),2200)}
+function fallbackCopy(text,ok){var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok();}catch(e){}document.body.removeChild(ta);}
+var toastT;
+function toast(msg){var t=document.getElementById('toast');t.innerHTML='<span class="dot">●</span> '+msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('show');},2200);}
 
-/* ───────────────────────── event delegation ───────────────────────── */
-document.addEventListener('click',e=>{
-  const el=e.target.closest('[data-action]'); if(!el)return;
-  switch(el.dataset.action){
-    case 'nav':         showPage(el.dataset.page); break;
-    case 'goto':        goToStep(el.dataset.page,el.dataset.stage); break;
-    case 'stage-toggle':el.closest('.stage').classList.toggle('open'); break;
-    case 'stage-done':  e.stopPropagation(); markStage(el.dataset.video,el.dataset.stage); break;
-    case 'scene-toggle':el.closest('.scene').classList.toggle('open'); break;
-    case 'scene-done':  markScene(el.dataset.video,el.dataset.scene); break;
-    case 'hook-toggle': el.closest('.hook').classList.toggle('open'); break;
-    case 'check':       toggleCheck(el); break;
-    case 'copy':        copyFrom(el); break;
-    case 'menu':        document.body.classList.toggle('nav-open'); break;
-  }
-});
-document.addEventListener('input',e=>{const f=e.target.closest('[data-field]');if(f)setVal(f.dataset.field,f.value)});
-
-/* ───────────────────────── init ───────────────────────── */
+/* ───── init / wiring ───── */
 function hydrateFields(){
-  document.querySelectorAll('[data-field]').forEach(f=>{const v=getVal(f.dataset.field);if(v!=null)f.value=v});
-  document.querySelectorAll('[data-check]').forEach(c=>c.classList.toggle('done',!!getVal(c.dataset.check)));
+  document.querySelectorAll('[data-field]').forEach(function(f){var v=getVal(f.dataset.field);if(v!=null)f.value=v;});
+  document.querySelectorAll('[data-check]').forEach(function(c){c.classList.toggle('done',!!getVal(c.dataset.check));});
 }
-(function init(){
+function init(){
+  buildModel();
+  renderSidebarVideos();
+  renderVideoPages();
   state=load();
-  renderSteppers();
   hydrateFields();
   recompute();
-  const last=state._lastPage||'studio';
+  var last=state._lastPage||'studio';
+  if(!document.getElementById('page-'+last))last='studio';
   switchPage(last);
   openCurrentStage(last);
-})();
+}
+
+if(typeof document==='undefined'){
+  globalThis.__PSV={videoPageHTML:videoPageHTML,esc:esc,STAGES:STAGES,buildModel:buildModel,videoPageFor:function(v){return videoPageHTML(v);}};
+}else{
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('[data-action]');if(!el)return;
+    switch(el.dataset.action){
+      case 'nav':showPage(el.dataset.page);break;
+      case 'goto':goToStep(el.dataset.page,el.dataset.stage);break;
+      case 'stage-toggle':el.closest('.stage').classList.toggle('open');break;
+      case 'stage-done':e.stopPropagation();markStage(el.dataset.video,el.dataset.stage);break;
+      case 'scene-toggle':el.closest('.scene').classList.toggle('open');break;
+      case 'scene-done':markScene(el.dataset.video,el.dataset.scene);break;
+      case 'hook-toggle':el.closest('.hook').classList.toggle('open');break;
+      case 'check':toggleCheck(el);break;
+      case 'copy':copyFrom(el);break;
+      case 'menu':document.body.classList.toggle('nav-open');break;
+    }
+  });
+  document.addEventListener('input',function(e){var f=e.target.closest('[data-field]');if(f)setVal(f.dataset.field,f.value);});
+  init();
+}
 </script>
 </body>
 </html>

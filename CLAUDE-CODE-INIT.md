@@ -14,17 +14,16 @@ PRIMA COSA DA FARE:
 2. Crea un file `README.md` che documenti: struttura del progetto, come aggiungere un nuovo video, e le convenzioni da rispettare.
 
 ARCHITETTURA DELLA DASHBOARD (rispettala sempre):
-- È un singolo file HTML. Niente framework, niente npm, niente build step. Deve aprirsi con doppio click nel browser.
-- Navigazione: ogni voce della sidebar chiama `showPage('id', this)`. Ogni pagina è un `<div id="page-XXX" class="page">`. Il target di showPage DEVE sempre avere una pagina corrispondente, altrimenti crasha.
-- Le variabili CSS dei colori sono in `:root`. Usa sempre quelle (es. `var(--accent)`), mai colori hardcoded.
-- I placeholder dei prompt come <<<SARA_ID>>> nel testo visibile DEVONO essere scritti come entità HTML escaped (&lt;&lt;&lt;SARA_ID&gt;&gt;&gt;) altrimenti il browser li interpreta come tag e rompe il rendering. Questa è la regola più importante.
-- Le scene dei video usano la struttura `.scene-card` con header cliccabile (toggleScene) e body espandibile.
-- I prompt copiabili usano `.prompt-box` con un `.copy-btn` che chiama `copyP(this)`.
+- È data-driven: lo shell `psychoshorts-dashboard.html` contiene stili + pagine di riferimento + motore di rendering. Ogni video è un file separato in `videos/` che chiama `PSV.register({...})`. Niente framework/npm/build: si apre con doppio click (gli `<script src>` classici funzionano da file://). Tieni shell + cartella `videos/` insieme.
+- Le pagine video vengono generate a runtime dentro `#video-pages`; le voci della sidebar dei video dentro `#nav-videos`. Le pagine di riferimento (studio, playbook, ecc.) restano HTML statico: ogni `data-page="x"` statico deve avere una `#page-x`.
+- Interazioni via `data-action` (event delegation), non onclick inline. Ogni `data-action` deve avere un `case` nello switch.
+- Le variabili CSS dei colori sono in `:root` (es. `var(--iris)`, `var(--gold)`). Mai colori hardcoded.
+- `<<<SARA_ID>>>`: NEI FILE DATI scrivilo in chiaro, il renderer (`esc()`) lo escapa da solo. NELL'HTML STATICO dello shell scrivilo escaped (&lt;&lt;&lt;SARA_ID&gt;&gt;&gt;).
 
 REGOLE DI QUALITÀ:
-- Dopo OGNI modifica, verifica che: (a) i div siano bilanciati, (b) ogni showPage('x') abbia una pagina #page-x, (c) non ci siano <<<...>>> raw non escaped, (d) ogni onclick punti a una funzione che esiste.
-- Non rompere mai le pagine esistenti quando ne aggiungi di nuove.
-- Mantieni lo stile visivo coerente (dark theme, le classi esistenti come .card, .badge, .step-row, .scene-card).
+- Dopo OGNI modifica: `node --check` sui file `videos/*.js` e sullo script dello shell; poi render-test in Node (vm) per verificare HTML generato bilanciato, nessun `<<<` raw, ogni `data-action` gestito; nello shell statico div/section bilanciati e ogni data-page statico ha la sua pagina.
+- Non rompere mai le pagine/video esistenti quando ne aggiungi di nuovi.
+- Mantieni lo stile coerente (dark theme, classi esistenti: .card, .pill, .stage, .scene, .prompt--img/--anim/--clip).
 
 CONTESTO DEL CONTENUTO (per capire cosa scriviamo):
 - Tema ombrello del canale: "the psychology behind why people do what they do" — relazioni, dark psychology, bias cognitivi, neuroscienze.
@@ -32,14 +31,14 @@ CONTESTO DEL CONTENUTO (per capire cosa scriviamo):
 - Voce fissa: Liam (ElevenLabs, Eleven v3, modalità Normale).
 - Struttura video: Hook (dolore riconoscibile) → Bridge (fai sentire visto) → Core (una idea + nome scientifico) → Close (domanda per i commenti).
 - ATTENZIONE TIMING: ElevenLabs legge a ~60 caratteri/secondo. Uno script "da 55 secondi" sulla carta diventa ~80 secondi reali. Le scene vanno sempre mappate sul timing reale dell'audio generato.
-- Il Video 1 (Sunk Cost Fallacy) è già completo nella dashboard e serve da riferimento. La pagina "Nuovo video" è il template da duplicare.
+- Il Video 1 (Sunk Cost Fallacy) è il riferimento completo, in `videos/video-01-sunk-cost.js`. Ogni video include anche una Copertina (prompt thumbnail virale: volto + sfondo a tinta unita acceso + testo bianco sopra / giallo enorme sotto, incluso nel prompt).
 
 WORKFLOW PER AGGIUNGERE UN NUOVO VIDEO (quando te lo chiederò):
 1. Ti darò il topic e lo script.
-2. Tu crei una nuova pagina `#page-videoN` duplicando la struttura di `#page-video1`, con: script diviso per timestamp, lista scene con prompt immagine + animazione (Sara escaped), riepilogo clip.
-3. Aggiungi la voce nella sidebar sotto "Produzione video".
-4. Aggiorni il contatore "Video pubblicati" in basso nella sidebar.
-5. Verifichi l'integrità (le 4 regole di qualità sopra).
+2. Copi un file dati esistente in `videos/video-NN-slug.js` e riempi l'oggetto `PSV.register({...})`: n, title, kicker, concept, cover, voice, script (array [timestamp, testo]), term/termCaps/termBeat, pubTitle, hashtags, scenes. `<<<SARA_ID>>>` in chiaro.
+3. Aggiungi una riga `<script src="videos/video-NN-slug.js"></script>` nello shell, accanto agli altri include.
+4. Studio, sidebar, stepper e pipeline si generano da soli. Lo stato iniziale degli stadi si imposta col campo `seed`.
+5. Verifichi l'integrità (regole di qualità sopra).
 
 Conferma che hai letto e capito, poi procedi con il punto 1 e 2 della "PRIMA COSA DA FARE".
 ```
