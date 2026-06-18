@@ -1,0 +1,7 @@
+# Windows / WSL alternate-data-stream artifacts
+*:Zone.Identifier
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
