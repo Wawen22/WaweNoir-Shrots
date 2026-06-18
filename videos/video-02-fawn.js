@@ -14,15 +14,15 @@ PSV.register({
     prompt:
 `Vertical 9:16 viral psychology thumbnail.
 
-<<<SARA_ID>>> center frame, medium close-up, eyes wide open looking directly into camera with an anxious, caught expression — like she just realized she apologizes for everything. Mouth slightly open. High energy.
+<<<SARA_ID>>> off-center, caught in a small apologetic cringe — one hand half-raised near her chest in a placating "sorry" gesture, shoulders pulled inward, an anxious wince and an uneasy half-smile, eyes glancing slightly away from the camera. Vulnerable, tense, relatable.
 
-Background: bold solid electric blue (#1E6FE8), slightly gradient toward dark blue at the edges. Vivid, saturated, eye-catching.
+Background: bold solid electric blue (#1E6FE8), slightly gradient toward dark blue at the edges. Vivid, saturated.
 
-Text overlay, Montserrat ExtraBold all caps, perfectly sharp:
-- TOP: "WHY YOU ALWAYS" in large white letters, thick black outline, wide letter-spacing.
-- CENTER BOTTOM (below face): "SAY SORRY" in massive bright yellow letters, even larger, thick black outline.
+Text overlay, Montserrat ExtraBold all caps, thick black outline, perfectly sharp and correctly spelled. Exactly two lines, each phrase appears ONCE — no duplicated or repeated words, no extra text:
+- TOP, above her head, in white: "WHY YOU ALWAYS"
+- BOTTOM, huge, in bright yellow: "SAY SORRY" — this bottom text sits BEHIND the subject: her shoulder and raised hand cross in front of the top of the yellow letters (magazine-cover depth effect), the text still fully readable.
 
-No shadows. High contrast. Colors: blue background, white + yellow text. Clean, bold, scroll-stopping. Photorealistic face.`,
+No shadows. High contrast, blue background, white + yellow text. Clean, bold, scroll-stopping. Photorealistic face.`,
     white: 'WHY YOU ALWAYS',
     yellow: 'SAY SORRY',
     alts: ['IT WAS NEVER YOUR FAULT', 'STOP APOLOGIZING', 'YOUR BRAIN LEARNED THIS']
@@ -139,9 +139,9 @@ No shadows. High contrast. Colors: blue background, white + yellow text. Clean, 
     { id: 's8', time: '67–75s', title: 'Scena 8 — Sicuro e sbagliato non sono la stessa cosa',
       sub: '"The apology was never about being wrong. It was about staying safe."',
       clips: [{ tool: 'h', label: 'CLIP 8 · ~7s',
-        image: { text: `<<<SARA_ID>>> standing a little taller, the apology not coming this time. A quiet, steady understanding on her face — the difference between staying safe and being wrong. Soft balanced light, slightly less desaturated than before. Vertical 9:16. Photorealistic.` },
-        anim: { text: `Very slow push-in. She holds still, calm, choosing not to apologize. 6 seconds.` },
-        tip: 'Primo momento in cui Sara NON si scusa. La luce un filo più calda segna la presa di coscienza.' }] },
+        image: { text: `<<<SARA_ID>>> in three-quarter profile, facing an out-of-frame person to her side, standing a little taller — the apology not coming this time. She holds the other person's gaze calmly, NOT looking at camera. A quiet, steady refusal to over-explain herself. Medium-wide shot, more of the room visible. Soft balanced light, slightly less desaturated than before. Vertical 9:16. Photorealistic.` },
+        anim: { text: `Very slow push-in. She holds still in profile, calm, choosing not to apologize to the person beside her. 6 seconds.` },
+        tip: 'Primo momento in cui Sara NON si scusa — di profilo, davanti a un interlocutore off-screen, MAI in camera (quello è riservato alla scena 9). Inquadratura più larga e luce un filo più calda la distinguono dalla 9.' }] },
 
     { id: 's9', time: '75–82s', title: 'Scena 9 — Sara guarda in camera', badges: [{ cls: 'pill pill--done', txt: 'CTA' }],
       sub: '"What\'s something you say sorry for that you know was never your fault?"',

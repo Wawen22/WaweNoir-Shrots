@@ -414,19 +414,19 @@ code{font-family:var(--fmono);font-size:.86em;background:var(--iris-bg);color:va
 
   <div class="sec-title"><span class="num">0</span> Copertina</div>
   <div class="card">
-    <div class="lead" style="margin-bottom:12px">Il frame che ferma lo scroll. Higgsfield scrive il testo dentro l'immagine. Formula virale: volto in primo piano con occhi spalancati, sfondo a tinta unita acceso, gancio spezzato in 2 (PARTE 1 bianca sopra, PUNCHLINE gialla sotto). Usa il dolore dell'hook, 3–5 parole totali.</div>
+    <div class="lead" style="margin-bottom:12px">Il frame che ferma lo scroll. Higgsfield scrive il testo nell'immagine. <b>Resta uguale</b> in ogni video: stile testo + colori pop accesi. <b>Cambia</b>: espressione, posa e inquadratura di Sara (adatte all'emozione del video, non per forza occhi spalancati). Gancio spezzato in 2 (PARTE 1 bianca sopra, PUNCHLINE gialla sotto), 3–5 parole totali.</div>
     <div class="copy-wrap"><div class="prompt prompt--img" data-copy-src>Vertical 9:16 viral psychology thumbnail.
 
-&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; center frame, medium close-up, eyes wide open looking directly into camera with a strong [shocked / knowing / anxious] expression tied to the video's emotion. Mouth slightly open. High energy.
+&lt;&lt;&lt;SARA_ID&gt;&gt;&gt; [posa e inquadratura — diversa dalle altre copertine] with a [espressione adatta all'emozione del video — non per forza occhi spalancati]. Cinematic, high contrast, high energy.
 
 Background: bold solid saturated colour ([red #E63946 / electric blue #1E6FE8 / purple #7B2FF7 / acid green]), slightly gradient toward a darker shade at the edges. Vivid, eye-catching.
 
-Text overlay, Montserrat ExtraBold all caps, perfectly sharp:
-- TOP: "[PARTE 1]" in large white letters, thick black outline, wide letter-spacing.
-- CENTER BOTTOM (below face): "[PUNCHLINE]" in massive bright yellow letters, even larger, thick black outline.
+Text overlay, Montserrat ExtraBold all caps, thick black outline, perfectly sharp and correctly spelled. Exactly two lines, each phrase appears ONCE — no duplicated or repeated words, no extra text:
+- TOP, above her head, in white: "[PARTE 1]"
+- BOTTOM, huge, in bright yellow: "[PUNCHLINE]" — this bottom text sits BEHIND the subject: her shoulder/hand crosses in front of the top of the letters (magazine-cover depth), text still fully readable.
 
 No shadows. High contrast. White + yellow text on a bold colour background. Clean, bold, scroll-stopping. Photorealistic face.</div><button class="copy-btn" data-action="copy" title="Copia">⧉</button></div>
-    <div class="tip gold">Scegli un colore di sfondo acceso diverso per ogni video (rosso, blu, viola, verde acido). Spezza il gancio in PARTE 1 (bianca) + PUNCHLINE (gialla). Rigenera finché Higgsfield scrive il testo correttamente.</div>
+    <div class="tip gold">Scegli un colore di sfondo acceso diverso per ogni video (rosso, blu, viola, verde acido). Spezza il gancio in PARTE 1 (bianca) + PUNCHLINE (gialla). <b>Effetto profondità:</b> la riga gialla passa dietro al soggetto. Se l'AI duplica una parola, rigenera (1–2 tentativi).</div>
   </div>
 
   <div class="sec-title"><span class="num">1</span> Topic & Script</div>
@@ -728,12 +728,12 @@ function sceneCard(sc,idx,vid){
 function coverBlock(v,vid){
   var c=v.cover;var alts=(c.alts||[]).map(function(a){return '"'+a+'"';}).join(' · ');
   var h='<div class="cover">';
-  h+='<div class="cover__head"><span class="cover__badge">▶ Copertina</span><div><div class="cover__title">Il frame che ferma lo scroll</div><div class="cover__sub">Higgsfield scrive il testo dentro l\'immagine. Formula virale: volto in primo piano, sfondo a tinta unita acceso, testo sopra bianco + sotto giallo enorme. Rigenera finché il testo è corretto.</div></div></div>';
+  h+='<div class="cover__head"><span class="cover__badge">▶ Copertina</span><div><div class="cover__title">Il frame che ferma lo scroll</div><div class="cover__sub">Higgsfield scrive il testo nell\'immagine. Resta uguale: <b>stile testo + colori pop</b>. Cambia ogni volta: <b>espressione, posa, inquadratura</b>. Rigenera finché il testo è corretto.</div></div></div>';
   h+=fieldLabel('<span class="toolbadge tb-h">Higgsfield</span> Prompt copertina <span class="spec">📐 9:16 · testo + stile inclusi</span>');
   h+=copyBox('img',c.prompt);
   h+=fieldLabel('Testo in copertina <span class="faint">— già incluso nel prompt sopra</span>');
   h+='<div class="copy-wrap"><div class="cover-text" data-copy-src>'+esc(c.white)+' <span class="hl">'+esc(c.yellow)+'</span></div><button class="copy-btn" data-action="copy" title="Copia" aria-label="Copia">⧉</button></div>';
-  h+=tipHtml('Formula (già nel prompt): sfondo a tinta unita acceso, volto in primo piano con occhi spalancati, testo Montserrat ExtraBold MAIUSCOLO — riga sopra <b>bianca</b>, riga sotto <b>gialla enorme</b>, outline nero spesso, niente ombre. Se cambi le parole, modificale <b>dentro il prompt</b>. Alternative: '+alts+'.',true);
+  h+=tipHtml('<b>Sempre uguale:</b> stile testo (Montserrat ExtraBold MAIUSCOLO, sopra bianco / sotto giallo enorme, outline nero, niente ombre) + colori pop saturi. <b>Cambia ogni volta:</b> espressione, posa e inquadratura di Sara — non clonare la copertina precedente. Se cambi le parole, modificale dentro il prompt. Alternative: '+alts+'.',true);
   h+=checkItem(vid+'.cover.done','Copertina generata e testo aggiunto');
   return h+'</div>';
 }
