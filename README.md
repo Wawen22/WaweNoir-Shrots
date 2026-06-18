@@ -11,7 +11,7 @@ Tutto vive in **un solo file**: [`psychoshorts-dashboard.html`](psychoshorts-das
 La dashboard risponde sempre a una domanda: **"a che punto sono e qual è la prossima cosa da fare?"**
 
 - **Studio** (home) — vista d'insieme di tutti i video. Ogni video è una card con una mini-timeline a 6 segmenti che si riempie man mano. Il pulsante **Continua →** ti porta al video e apre lo step giusto.
-- **Pagina del singolo video** — è la pipeline guidata. In alto uno **stepper appiccicoso** (la timeline di montaggio: lo step da fare ora è in **oro**, quelli fatti in **verde**). Sotto, 6 stadi che apri/chiudi:
+- **Pagina del singolo video** — è la pipeline guidata. In cima un blocco **Copertina** (prompt immagine + testo gancio per il thumbnail che ferma lo scroll). Sotto, uno **stepper appiccicoso** (la timeline di montaggio: lo step da fare ora è in **oro**, quelli fatti in **verde**) e i 6 stadi che apri/chiudi:
 
   | # | Stadio | Cosa contiene |
   |---|--------|---------------|
@@ -53,7 +53,7 @@ Con Claude Code, scrivi:
 Claude Code seguirà questo workflow:
 
 1. Pesca/usa il topic e lo script.
-2. Crea una nuova `<section id="page-videoN" class="page">` duplicando la struttura di `#page-video1`: stepper, 6 stadi, script per timestamp, scene-card con prompt immagine + animazione (Sara escaped), riepilogo clip.
+2. Crea una nuova `<section id="page-videoN" class="page">` duplicando la struttura di `#page-video1`: stepper, blocco **Copertina** in cima (prompt immagine + testo gancio), 6 stadi, script per timestamp, scene-card con prompt immagine + animazione (Sara escaped), riepilogo clip.
 3. Aggiunge il video all'array `VIDEOS` nello `<script>` (`{id:'vN', page:'videoN', n:N, title:'…', concept:'…'}`) — così appare in automatico nello Studio.
 4. Aggiunge la voce in sidebar sotto "Produzione".
 5. Verifica l'integrità (vedi sotto).
