@@ -1,4 +1,4 @@
-# wawelab.ai: sito ufficiale
+# WaweLab: sito ufficiale (https://wawen22.com)
 
 Sito statico (HTML, CSS, JS senza build). Si pubblica così com'è su Vercel, Netlify, GitHub Pages o Cloudflare Pages.
 
@@ -11,3 +11,7 @@ Sito statico (HTML, CSS, JS senza build). Si pubblica così com'è su Vercel, Ne
 1. Scheda in `#reperti` (codice, serie, titolo, parola del fascicolo).
 2. Video: `ffmpeg -i render/WL-0XX_vN_ig.mp4 -vf scale=540:-2 -c:v libx264 -crf 27 -c:a aac -b:a 96k -movflags +faststart site/assets/video/wl-0xx.mp4` + poster.
 3. Fascicolo: PDF in `site/f/wl-0xx-parola.pdf`. È il link da mettere al posto di `[LINK FASCICOLO]` nei DM.
+
+## Pubblicazione
+1. Copia `site/` nella root del repo `Wawen22/WaweNoir-Shrots` e fai push su `main`.
+2. Deploy di produzione del progetto Vercel `wawen22` da quel commit (il repo non è collegato al progetto, quindi il push non basta).
