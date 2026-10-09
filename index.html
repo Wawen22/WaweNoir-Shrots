@@ -261,47 +261,142 @@
       </div>
     </section>
 
-    <!-- METODO (unica inversione: nero archivio) -->
-    <section class="metodo" id="metodo">
-      <div class="wrap">
+    <!-- METODO: lo studio, una stazione alla volta (fissato, guidato dallo scroll) -->
+    <section class="metodo" id="metodo" data-metodo>
+      <div class="wrap metodo__head">
         <h2 class="display h2" data-reveal-title>Come nasce un reperto.</h2>
-        <p class="lede" data-reveal>Quattro stazioni, sempre le stesse. Il fascicolo WL-002 le spiega una per una, con i prompt.</p>
+        <p class="lede" data-reveal>Quattro stazioni, sempre le stesse. Le attraversiamo con un reperto vero: WL-002.</p>
+      </div>
 
-        <div class="stack" data-stack>
-          <article class="station" data-station>
-            <span class="station__n">01</span>
-            <div class="station__body">
-              <h3>Ricerca</h3>
-              <p class="station__rule">Tutto ciò che non ha una fonte primaria, una data e un link si scarta.</p>
-              <ul class="station__tools"><li><img src="assets/logos/claude.svg" alt="" width="22" height="22">Claude, con ricerca web</li></ul>
+      <div class="studio" data-studio>
+        <div class="wrap studio__grid">
+          <ol class="rail" data-rail>
+            <li class="rail__item is-active">
+              <span class="rail__n">01</span>
+              <div class="rail__body">
+                <h3>Ricerca</h3>
+                <p>Tutto ciò che non ha una fonte primaria, una data e un link si scarta.</p>
+                <span class="sticker"><img src="assets/logos/claude.svg" alt="" width="20" height="20">Claude</span>
+              </div>
+            </li>
+            <li class="rail__item">
+              <span class="rail__n">02</span>
+              <div class="rail__body">
+                <h3>Testo</h3>
+                <p>Sempre la stessa struttura: aggancio, fatto, verdetto. È la struttura a rendere veloce la scrittura.</p>
+                <span class="sticker"><img src="assets/logos/claude.svg" alt="" width="20" height="20">Claude</span>
+              </div>
+            </li>
+            <li class="rail__item">
+              <span class="rail__n">03</span>
+              <div class="rail__body">
+                <h3>Voce</h3>
+                <p>Generata da un campione registrato dal founder. Tre versioni, resta quella senza esitazioni.</p>
+                <span class="sticker"><img src="assets/logos/higgsfield.png" alt="" width="20" height="20">Higgsfield</span>
+              </div>
+            </li>
+            <li class="rail__item">
+              <span class="rail__n">04</span>
+              <div class="rail__body">
+                <h3>Montaggio</h3>
+                <p>Ogni parola ha il suo tempo. È il video che si adatta alla voce, non il contrario.</p>
+                <span class="sticker"><img src="assets/logos/openai.svg" alt="" width="20" height="20">Whisper</span>
+                <span class="sticker"><i class="ph ph-film-strip" aria-hidden="true"></i>HyperFrames</span>
+              </div>
+            </li>
+          </ol>
+
+          <div class="stage" data-stage>
+            <div class="stage__bar">
+              <span class="stage__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="stage__label" data-stage-label>WL-002 / RICERCA</span>
+              <span class="stage__meter" aria-hidden="true"><span data-stage-meter></span></span>
             </div>
-          </article>
-          <article class="station" data-station>
-            <span class="station__n">02</span>
-            <div class="station__body">
-              <h3>Testo</h3>
-              <p class="station__rule">Sempre la stessa struttura: aggancio, fatto, verdetto. È la struttura a rendere veloce la scrittura.</p>
-              <ul class="station__tools"><li><img src="assets/logos/claude.svg" alt="" width="22" height="22">Claude</li></ul>
+            <div class="stage__body">
+
+              <div class="scene scene--ricerca" data-scene>
+                <article class="clip" data-clip="ok" style="--l:4%;--t:8%;--r:-5deg">
+                  <p class="clip__src">blog.google</p>
+                  <p class="clip__t">Google: SynthID Detector per tutti</p>
+                  <p class="clip__d">07.10.2026</p>
+                  <span class="clip__ok"><i class="ph ph-check" aria-hidden="true"></i></span>
+                </article>
+                <article class="clip clip--bad" data-clip="bad" style="--l:40%;--t:4%;--r:6deg">
+                  <p class="clip__src">nessun link</p>
+                  <p class="clip__t">Thread virale su un nuovo modello</p>
+                  <p class="clip__d">nessuna data</p>
+                  <span class="clip__stamp">Scartata</span>
+                </article>
+                <article class="clip" data-clip="ok" style="--l:66%;--t:12%;--r:3deg">
+                  <p class="clip__src">openai.com</p>
+                  <p class="clip__t">OpenAI: GPT-6 for everyone</p>
+                  <p class="clip__d">07.10.2026</p>
+                  <span class="clip__ok"><i class="ph ph-check" aria-hidden="true"></i></span>
+                </article>
+                <article class="clip clip--bad" data-clip="bad" style="--l:10%;--t:52%;--r:-3deg">
+                  <p class="clip__src">sito di notizie</p>
+                  <p class="clip__t">Articolo senza la fonte originale</p>
+                  <p class="clip__d">nessun link alla fonte</p>
+                  <span class="clip__stamp">Scartata</span>
+                </article>
+                <article class="clip" data-clip="ok" style="--l:48%;--t:54%;--r:-6deg">
+                  <p class="clip__src">garanteprivacy.it</p>
+                  <p class="clip__t">Garante privacy: provvedimento IQVIA</p>
+                  <p class="clip__d">02.10.2026</p>
+                  <span class="clip__ok"><i class="ph ph-check" aria-hidden="true"></i></span>
+                </article>
+                <p class="scene__foot">3 tenute <b>/</b> 2 scartate</p>
+              </div>
+
+              <div class="scene scene--testo" data-scene>
+                <p class="scene__kicker">Script, esempio da WL-001</p>
+                <div class="sline"><span class="sline__tag">Aggancio</span><p data-type>L'AI non ti dà risposte sbagliate. Ti dà risposte medie.</p></div>
+                <div class="sline"><span class="sline__tag">Fatto</span><p data-type>Quando non sa niente di te, risponde come a chiunque.</p></div>
+                <div class="sline"><span class="sline__tag">Verdetto</span><p data-type>Stessa AI, stessa domanda. Ma la risposta parla come te.</p></div>
+              </div>
+
+              <div class="scene scene--voce" data-scene>
+                <div class="take" data-take="bad">
+                  <span class="take__n">Take 1</span>
+                  <div class="wave" data-wave="1"></div>
+                  <span class="take__note">Ripete una parola</span>
+                </div>
+                <div class="take take--cut" data-take="bad">
+                  <span class="take__n">Take 2</span>
+                  <div class="wave" data-wave="2"></div>
+                  <span class="take__note">Si ferma a metà</span>
+                </div>
+                <div class="take" data-take="ok">
+                  <span class="take__n">Take 3</span>
+                  <div class="wave" data-wave="3"></div>
+                  <span class="take__note">Nessuna esitazione</span>
+                  <span class="take__stamp">Scelta</span>
+                </div>
+                <span class="voce__head" data-voce-head aria-hidden="true"></span>
+              </div>
+
+              <div class="scene scene--montaggio" data-scene>
+                <div class="phone" aria-hidden="true">
+                  <p class="phone__code">WL-002 / BUILT</p>
+                  <p class="phone__words" data-live>
+                    <span>Questo</span> <span>video</span> <span>ha</span> <span>richiesto</span> <span class="hl">quattro</span> <span>strumenti,</span> <span>zero</span> <span>telecamere,</span> <span>e</span> <span>una</span> <span>persona</span> <span>sola.</span>
+                  </p>
+                </div>
+                <div class="tl">
+                  <div class="tl__track"><span class="tl__label">Voce</span><div class="wave wave--line" data-wave="4"></div></div>
+                  <div class="tl__track"><span class="tl__label">Parole</span><div class="tl__chips" data-chips></div></div>
+                  <div class="tl__track"><span class="tl__label">Scene</span><div class="tl__blocks"><i style="--w:34%"></i><i style="--w:28%"></i><i style="--w:38%"></i></div></div>
+                  <span class="tl__head" data-tl-head aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <div class="stamp stage__stamp" data-stage-stamp>Archiviato <i class="ph ph-check" aria-hidden="true"></i></div>
             </div>
-          </article>
-          <article class="station" data-station>
-            <span class="station__n">03</span>
-            <div class="station__body">
-              <h3>Voce</h3>
-              <p class="station__rule">Una voce generata da un campione registrato dal founder. Tre versioni, resta quella senza esitazioni.</p>
-              <ul class="station__tools"><li><img src="assets/logos/higgsfield.png" alt="" width="22" height="22">Higgsfield</li></ul>
-            </div>
-          </article>
-          <article class="station" data-station>
-            <span class="station__n">04</span>
-            <div class="station__body">
-              <h3>Montaggio</h3>
-              <p class="station__rule">Ogni parola a schermo è agganciata alla voce. È il video che si adatta alla voce.</p>
-              <ul class="station__tools"><li><img src="assets/logos/openai.svg" alt="" width="22" height="22">Whisper</li><li><i class="ph ph-film-strip" aria-hidden="true"></i>HyperFrames</li></ul>
-            </div>
-          </article>
+          </div>
         </div>
+      </div>
 
+      <div class="wrap">
         <div class="rules">
           <h3 class="rules__title" data-reveal>Le regole dell'archivio</h3>
           <ul class="rules__list">
@@ -388,6 +483,18 @@
       </div>
     </div>
   </footer>
+
+  <button class="scrollcue" data-cue type="button" aria-label="Scorri la pagina">
+    <svg class="scrollcue__ring" viewBox="0 0 120 120" aria-hidden="true">
+      <circle class="scrollcue__track" cx="60" cy="60" r="57"/>
+      <circle class="scrollcue__fill" cx="60" cy="60" r="57" pathLength="1" data-cue-fill/>
+    </svg>
+    <svg class="scrollcue__text" viewBox="0 0 120 120" aria-hidden="true" data-cue-text>
+      <defs><path id="cuePath" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs>
+      <text textLength="266" lengthAdjust="spacingAndGlyphs"><textPath href="#cuePath" startOffset="0" textLength="266" lengthAdjust="spacingAndGlyphs">SCORRI L'ARCHIVIO / SCORRI L'ARCHIVIO / </textPath></text>
+    </svg>
+    <span class="scrollcue__core" aria-hidden="true"><i class="ph ph-arrow-down" data-cue-arrow></i></span>
+  </button>
 
   <div class="grain" aria-hidden="true"></div>
 

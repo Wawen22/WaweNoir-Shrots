@@ -112,6 +112,27 @@
     t.style.setProperty("--my", `${e.clientY - r.top}px`);
   }));
 
+  // Onde sonore e parole della timeline (deterministiche, niente dati inventati: è un'illustrazione)
+  $$("[data-wave]").forEach((w) => {
+    const seed = +w.dataset.wave;
+    const n = seed === 4 ? 110 : 64;
+    for (let i = 0; i < n; i++) {
+      const v = Math.abs(Math.sin(i * 0.47 + seed) * Math.cos(i * 0.13 + seed * 2)) * 0.8 + 0.12;
+      const b = document.createElement("i");
+      b.style.setProperty("--h", `${Math.round(v * 100)}%`);
+      w.append(b);
+    }
+  });
+  const chipBox = $("[data-chips]");
+  const liveWords = $$("[data-live] span");
+  if (chipBox) liveWords.forEach((w, i) => {
+    const c = document.createElement("span");
+    c.textContent = w.textContent.replace(/[.,]/g, "").toLowerCase();
+    c.style.setProperty("--x", `${(i / liveWords.length) * 92}%`);
+    c.style.top = i % 2 ? "18px" : "0px";
+    chipBox.append(c);
+  });
+
   // ---------- versione statica ----------
   if (!hasGsap) {
     root.classList.remove("intro-pending");
@@ -358,19 +379,109 @@
     },
   });
 
-  // ---------- METODO: stazioni che si impilano ----------
-  const stations = $$("[data-station]");
-  stations.forEach((s, i) => {
-    s.style.setProperty("--i", i);
-    gsap.from($(".station__n", s), { yPercent: 60, opacity: 0, duration: 1, ease: "power4.out", scrollTrigger: { trigger: s, start: "top 80%" } });
-    gsap.from($$(".station__tools li", s), { y: 30, opacity: 0, rotation: 8, duration: 0.6, ease: "power3.out", stagger: 0.1, scrollTrigger: { trigger: s, start: "top 60%" } });
-    const next = stations[i + 1];
-    if (!next) return;
-    gsap.to(s, {
-      scale: 0.92, filter: "brightness(0.5)", ease: "none",
-      scrollTrigger: { trigger: next, start: "top 75%", end: "top 25%", scrub: true },
+  // ---------- METODO: lo studio, una stazione alla volta ----------
+  const studio = $("[data-studio]");
+  if (studio) {
+    const scenes = $$("[data-scene]", studio);
+    const railItems = $$(".rail__item", studio);
+    const rail = $("[data-rail]", studio);
+    const label = $("[data-stage-label]", studio);
+    const meter = $("[data-stage-meter]", studio);
+    const names = ["Ricerca", "Testo", "Voce", "Montaggio"];
+    const marks = [0, 1.35, 2.85, 4.15];
+    gsap.set(scenes, { autoAlpha: 0 });
+    gsap.set(scenes[0], { autoAlpha: 1 });
+
+    // Testo: lettere da "battere a macchina" + cursore
+    const lines = $$("[data-type]", studio).map((p) => {
+      const chars = [];
+      [...p.textContent].forEach((ch) => {
+        const c = document.createElement("span");
+        c.className = "tc";
+        c.textContent = ch;
+        chars.push(c);
+      });
+      p.textContent = "";
+      p.append(...chars);
+      const caret = document.createElement("span");
+      caret.className = "caret";
+      p.append(caret);
+      gsap.set(caret, { autoAlpha: 0 });
+      return { chars, caret };
     });
-  });
+
+    const clips = $$(".clip", studio);
+    const good = clips.filter((c) => c.dataset.clip === "ok");
+    const bad = clips.filter((c) => c.dataset.clip === "bad");
+    const vHead = $("[data-voce-head]", studio);
+    const tHead = $("[data-tl-head]", studio);
+    const takes = $$(".take", studio);
+    const chips = $$("[data-chips] span", studio);
+    const stamp = $("[data-stage-stamp]", studio);
+    const waveW = () => $(".take .wave", studio).offsetWidth;
+    const tlW = () => $(".tl__chips", studio).offsetWidth;
+
+    const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+    // 01 RICERCA: le fonti cadono sul tavolo, due vengono scartate
+    const baseRot = (c) => parseFloat(getComputedStyle(c).getPropertyValue("--r")) || 0;
+    tl.fromTo(clips, { yPercent: -220, opacity: 0, rotation: (i, c) => baseRot(c) + 24 }, { yPercent: 0, opacity: 1, rotation: (i, c) => baseRot(c), duration: 0.45, stagger: 0.1, ease: "power3.out" }, 0)
+      .fromTo($$(".clip__ok", studio), { opacity: 0, scale: 2.4, rotation: -30 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.15, stagger: 0.05, ease: "power4.in" }, 0.62)
+      .fromTo($$(".clip__stamp", studio), { opacity: 0, scale: 2.6 }, { opacity: 1, scale: 1, duration: 0.15, stagger: 0.06, ease: "power4.in" }, 0.74)
+      .fromTo(bad, { y: 0, x: 0 }, { y: 420, x: (i) => (i ? -80 : 140), rotation: (i, c) => baseRot(c) + (i ? -50 : 45), opacity: 0, immediateRender: false, duration: 0.35, ease: "power2.in" }, 0.95)
+      .fromTo(good, { rotation: (i, c) => baseRot(c) }, { rotation: 0, immediateRender: false, duration: 0.25 }, 1.0)
+      .fromTo(".scene__foot", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.2 }, 1.05)
+      // passaggio
+      .to(scenes[0], { autoAlpha: 0, y: -24, duration: 0.15 }, 1.25)
+      .fromTo(scenes[1], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.2 }, 1.35)
+      .fromTo($$(".sline__tag", studio), { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.15, stagger: 0.42, ease: "power3.out" }, 1.4);
+    // 02 TESTO: si scrive riga per riga
+    lines.forEach(({ chars, caret }, i) => {
+      const at = 1.45 + i * 0.42;
+      tl.set(caret, { autoAlpha: 1 }, at).to(chars, { opacity: 1, duration: 0.01, stagger: 0.36 / chars.length, ease: "none" }, at);
+      if (i < lines.length - 1) tl.set(caret, { autoAlpha: 0 }, at + 0.4);
+    });
+    tl.to(scenes[1], { autoAlpha: 0, y: -24, duration: 0.15 }, 2.75)
+      .fromTo(scenes[2], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.2 }, 2.85)
+      // 03 VOCE: tre take, una sola resta
+      .fromTo(takes.map((t) => $$(".wave i", t)).flat(), { scaleY: 0 }, { scaleY: 1, duration: 0.3, stagger: 0.003 }, 2.9)
+      .fromTo(vHead, { x: 0 }, { x: () => waveW(), duration: 0.6, ease: "none" }, 3.15)
+      .fromTo(takes[0], { "--x": 0, opacity: 1 }, { "--x": 1, opacity: 0.45, duration: 0.12 }, 3.55)
+      .fromTo(takes[1], { "--x": 0, opacity: 1 }, { "--x": 1, opacity: 0.45, duration: 0.12 }, 3.68)
+      .fromTo($(".take__stamp", studio), { opacity: 0, scale: 2.6, rotation: -24 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.15, ease: "power4.in" }, 3.82)
+      .to(scenes[2], { autoAlpha: 0, y: -24, duration: 0.15 }, 4.05)
+      .fromTo(scenes[3], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.2 }, 4.15)
+      // 04 MONTAGGIO: la testina scorre, le parole compaiono sulla voce
+      .fromTo(".phone", { yPercent: 20, rotation: -6, opacity: 0 }, { yPercent: 0, rotation: 0, opacity: 1, duration: 0.25 }, 4.15)
+      .fromTo(tHead, { x: 0 }, { x: () => tlW(), duration: 1.0, ease: "none" }, 4.35)
+      .fromTo(liveWords, { opacity: 0, yPercent: 60, scale: 1.3 }, { opacity: 1, yPercent: 0, scale: 1, duration: 0.06, stagger: 1.0 / liveWords.length, ease: "power3.out" }, 4.35)
+      .fromTo(chips, { backgroundColor: "#2A2926", color: "#F1EBDD" }, { backgroundColor: "#E46A3A", color: "#151515", duration: 0.04, stagger: 1.0 / chips.length }, 4.35)
+      .fromTo(stamp, { opacity: 0, scale: 2.6, rotation: -24 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.18, ease: "power4.in" }, 5.45)
+      .to(".stage", { x: 5, duration: 0.02, yoyo: true, repeat: 3, ease: "none" }, 5.63)
+      .to({}, { duration: 0.35 });
+
+    let current = -1;
+    const setStep = (i) => {
+      if (i === current) return;
+      current = i;
+      railItems.forEach((r, k) => { r.classList.toggle("is-active", k === i); r.classList.toggle("is-done", k < i); });
+      label.textContent = `WL-002 / ${names[i].toUpperCase()}`;
+    };
+    setStep(0);
+    ScrollTrigger.create({
+      trigger: studio, start: "top top", end: () => `+=${window.innerHeight * 4.6}`,
+      pin: true, scrub: 0.8, animation: tl, invalidateOnRefresh: true,
+    });
+    // lo stato segue la timeline (che con lo scrub arriva un attimo dopo lo scroll)
+    tl.eventCallback("onUpdate", () => {
+      const t = tl.time();
+      let i = 0;
+      marks.forEach((m, k) => { if (t >= m - 0.05) i = k; });
+      setStep(i);
+      const pr = tl.progress();
+      gsap.set(meter, { scaleX: pr });
+      rail.style.setProperty("--rp", pr.toFixed(3));
+    });
+  }
 
   // ---------- REPERTO ZERO: la scheda segue il puntatore ----------
   const fig = $("[data-tilt] .zero__photo");
@@ -412,6 +523,44 @@
     });
     b.addEventListener("pointerleave", () => { xTo(0); yTo(0); });
   });
+
+  // ---------- INDICATORE DI SCROLL ----------
+  const cue = $("[data-cue]");
+  if (cue) {
+    const fill = $("[data-cue-fill]", cue);
+    const text = $("[data-cue-text]", cue);
+    const arrow = $("[data-cue-arrow]", cue);
+    const spin = gsap.to(text, { rotation: 360, duration: 16, repeat: -1, ease: "none", transformOrigin: "50% 50%" });
+    const bob = gsap.to(arrow, { y: 5, duration: 0.7, yoyo: true, repeat: -1, ease: "sine.inOut" });
+    let mode = "down";
+    const setMode = (m) => {
+      if (m === mode) return;
+      mode = m;
+      gsap.to(arrow, { rotation: m === "right" ? -90 : m === "up" ? 180 : 0, duration: 0.5, ease: "power3.out" });
+      cue.setAttribute("aria-label", m === "up" ? "Torna all'inizio" : "Scorri la pagina");
+    };
+    let inPan = false;
+    ScrollTrigger.create({
+      start: 0, end: "max",
+      onUpdate(self) {
+        gsap.set(fill, { strokeDashoffset: 1 - self.progress });
+        const v = Math.abs(self.getVelocity());
+        gsap.to(spin, { timeScale: 1 + Math.min(v / 250, 8), duration: 0.2, overwrite: true });
+        gsap.to(spin, { timeScale: 1, duration: 1.4, delay: 0.25, ease: "power2.out" });
+        setMode(self.progress > 0.985 ? "up" : inPan ? "right" : "down");
+      },
+    });
+    const panSec = $("[data-pan]");
+    if (panSec) ScrollTrigger.create({ trigger: panSec, start: "top top", end: () => `+=${Math.max(1, $("[data-pan-track]").scrollWidth - window.innerWidth)}`, onToggle: (s) => { inPan = s.isActive && !panSec.classList.contains("is-native"); setMode(inPan ? "right" : "down"); } });
+    ScrollTrigger.create({ trigger: ".metodo", start: "top bottom-=70", end: "bottom bottom-=70", toggleClass: { targets: cue, className: "on-dark" } });
+    cue.addEventListener("click", () => {
+      if (mode === "up") { lenis ? lenis.scrollTo(0, { duration: 1.6 }) : window.scrollTo({ top: 0, behavior: "smooth" }); return; }
+      const to = window.scrollY + window.innerHeight * 0.85;
+      lenis ? lenis.scrollTo(to, { duration: 1 }) : window.scrollTo({ top: to, behavior: "smooth" });
+    });
+    gsap.from(cue, { scale: 0, rotation: -120, duration: 0.9, ease: "power4.out", delay: seen ? 1.4 : 3.4 });
+    void bob;
+  }
 
   // Ricalcolo quando i font sono pronti (cambiano le misure)
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
