@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WaweLab | Archivio del Futuro</title>
+  <meta name="description" content="WaweLab archivia il futuro mentre arriva: cosa esce nell'AI, cosa funziona davvero e come usarlo. Anche se non sei tecnico.">
+  <meta name="theme-color" content="#F1EBDD" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="WaweLab | Archivio del Futuro">
+  <meta property="og:description" content="Cosa esce nell'AI, cosa funziona, come usarlo. Anche se non sei tecnico.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/cut-computer.webp" as="image">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Vai al contenuto</a>
+
+  <header class="nav" data-nav>
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top" aria-label="WaweLab, torna su">
+        <span class="nav__mark">W</span>
+        <span class="nav__name">WaweLab</span>
+      </a>
+      <nav class="nav__links" aria-label="Sezioni">
+        <a href="#reperti">Reperti</a>
+        <a href="#serie">Serie</a>
+        <a href="#fascicoli">Fascicoli</a>
+        <a href="#metodo">Metodo</a>
+        <a href="#aziende">Per aziende</a>
+      </nav>
+      <a class="btn btn--ink btn--sm" href="https://www.instagram.com/wawelab.ai/" target="_blank" rel="noopener">
+        <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+        <span>Segui l'archivio</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="code" data-load="0">WL-000 / ARCHIVIO DEL FUTURO</p>
+          <h1 class="display hero__title">
+            <span class="line"><span data-load="1">Il futuro</span></span>
+            <span class="line"><span data-load="2">non si guarda.</span></span>
+            <span class="line"><span data-load="3" class="accent">Si crea.</span></span>
+          </h1>
+          <p class="hero__sub" data-load="4">Ogni settimana apro l'archivio dell'AI: cosa esce, cosa funziona, come usarlo. Anche se non sei tecnico.</p>
+          <div class="hero__ctas" data-load="5">
+            <a class="btn btn--ink" href="https://www.instagram.com/wawelab.ai/" target="_blank" rel="noopener">
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i><span>Segui l'archivio</span>
+            </a>
+            <a class="btn btn--line" href="#reperti"><span>Apri i reperti</span><i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="collage" data-collage aria-hidden="true">
+          <span class="reg reg--tl"></span><span class="reg reg--br"></span>
+          <div class="collage__paper" data-depth="0.15"></div>
+          <img class="piece piece--newspaper" data-depth="0.35" src="assets/img/cut-newspaper.webp" alt="" width="720" height="720">
+          <img class="piece piece--computer" data-depth="0.6" src="assets/img/cut-computer.webp" alt="" width="720" height="720" fetchpriority="high">
+          <span class="tape tape--a" data-depth="0.7"></span>
+          <img class="piece piece--hand" data-depth="0.9" src="assets/img/cut-hand.webp" alt="" width="720" height="720">
+          <img class="piece piece--tube" data-depth="1.2" src="assets/img/cut-tube.webp" alt="" width="720" height="720">
+          <img class="piece piece--sphere" data-depth="1.5" src="assets/img/cut-sphere.webp" alt="" width="720" height="720">
+          <span class="tape tape--b" data-depth="0.5"></span>
+          <div class="stamp stamp--hero" data-depth="1">Archiviato <i class="ph ph-check" aria-hidden="true"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAPE MARQUEE -->
+    <div class="tapeband" aria-label="Le serie di WaweLab">
+      <div class="tapeband__track">
+        <span>Signal</span><i>/</i><span>Built</span><i>/</i><span>Tested</span><i>/</i><span>Made</span><i>/</i><span>Carosello</span><i>/</i><span>Bollettino</span><i>/</i>
+        <span aria-hidden="true">Signal</span><i>/</i><span aria-hidden="true">Built</span><i>/</i><span aria-hidden="true">Tested</span><i>/</i><span aria-hidden="true">Made</span><i>/</i><span aria-hidden="true">Carosello</span><i>/</i><span aria-hidden="true">Bollettino</span><i>/</i>
+      </div>
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto wrap">
+      <p class="manifesto__text" data-words>
+        Ogni settimana metto alla prova i nuovi tool di AI. E archivio solo quello che funziona davvero. Così tu non perdi <span class="mark-circle">tempo<svg viewBox="0 0 200 80" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M8 44 C 10 14, 160 4, 190 30 C 206 52, 150 76, 92 74 C 40 72, 4 62, 14 36 C 22 20, 70 10, 120 12"/></svg></span>. E nemmeno <span class="mark-strike">soldi</span>.
+      </p>
+    </section>
+
+    <!-- REPERTI -->
+    <section class="reperti" id="reperti">
+      <div class="wrap">
+        <h2 class="display h2 reveal">Primi reperti in archivio</h2>
+        <p class="lede reveal">Il lancio, domenica 11 ottobre 2026: un manifesto, un glossario e il metodo dello studio.</p>
+
+        <div class="reperti__grid">
+          <article class="card card--video reveal" data-tilt>
+            <div class="card__media">
+              <video data-player preload="none" playsinline poster="assets/video/wl-000-poster.jpg" src="assets/video/wl-000.mp4"></video>
+              <button class="play" data-play aria-label="Riproduci il reperto WL-000 con audio"><i class="ph ph-play" aria-hidden="true"></i></button>
+            </div>
+            <div class="card__meta">
+              <p class="code">WL-000 / MANIFESTO</p>
+              <h3 class="card__title">Questo video non l'ha montato nessuno.</h3>
+              <p>Voce clonata, testo e montaggio fatti con l'AI. Il reperto zero spiega cosa trovi qui.</p>
+            </div>
+          </article>
+
+          <article class="card card--carousel reveal" data-tilt>
+            <div class="card__media card__media--stack">
+              <img src="assets/img/carosello-2.webp" alt="" loading="lazy" width="900" height="1125" class="behind">
+              <img src="assets/img/carosello.webp" alt="Copertina del carosello Le 8 parole dell'AI che senti ovunque" loading="lazy" width="900" height="1125">
+            </div>
+            <div class="card__meta">
+              <p class="code">WL-001 / GLOSSARIO</p>
+              <h3 class="card__title">Le 8 parole dell'AI che senti ovunque.</h3>
+              <p>Prompt, token, agente, RAG e altre quattro. Senza gergo, con un esempio per ognuna.</p>
+              <p class="keyword">Commenta <b>GLOSSARIO</b></p>
+            </div>
+          </article>
+
+          <article class="card card--video card--offset reveal" data-tilt>
+            <div class="card__media">
+              <video data-player preload="none" playsinline poster="assets/video/wl-002-poster.jpg" src="assets/video/wl-002.mp4"></video>
+              <button class="play" data-play aria-label="Riproduci il reperto WL-002 con audio"><i class="ph ph-play" aria-hidden="true"></i></button>
+            </div>
+            <div class="card__meta">
+              <p class="code">WL-002 / BUILT</p>
+              <h3 class="card__title">Quattro strumenti, zero telecamere.</h3>
+              <p>Le quattro stazioni con cui nasce ogni reel di WaweLab.</p>
+              <p class="keyword">Commenta <b>WORKFLOW</b></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERIE -->
+    <section class="serie" id="serie">
+      <div class="wrap serie__grid">
+        <div class="serie__head">
+          <h2 class="display h2 reveal">Una settimana in archivio</h2>
+          <p class="lede reveal">Cinque formati, sempre gli stessi giorni. Così sai cosa aspettarti.</p>
+          <div class="serie__preview" aria-hidden="true">
+            <img data-preview="signal" class="is-on" src="assets/img/signal.webp" alt="" loading="lazy" width="540" height="960">
+            <img data-preview="built" src="assets/img/built.webp" alt="" loading="lazy" width="540" height="960">
+            <img data-preview="made" src="assets/img/made.webp" alt="" loading="lazy" width="752" height="1344">
+            <img data-preview="carosello" src="assets/img/carosello.webp" alt="" loading="lazy" width="900" height="1125">
+            <img data-preview="bollettino" src="assets/img/drawer.webp" alt="" loading="lazy" width="752" height="1344">
+          </div>
+        </div>
+
+        <ol class="serie__list">
+          <li class="serie__row" data-serie="signal" tabindex="0">
+            <span class="serie__day">Lun</span>
+            <span class="serie__name">Signal</span>
+            <span class="serie__desc">La notizia AI della settimana: cosa è successo davvero, con fonte e data, e cosa cambia per te.</span>
+          </li>
+          <li class="serie__row" data-serie="built" tabindex="0">
+            <span class="serie__day">Mer</span>
+            <span class="serie__name">Built <em>/</em> Tested</span>
+            <span class="serie__desc">Costruisco qualcosa con l'AI o la metto alla prova. Alla fine c'è sempre un verdetto onesto.</span>
+          </li>
+          <li class="serie__row" data-serie="made" tabindex="0">
+            <span class="serie__day">Ven</span>
+            <span class="serie__name">Made</span>
+            <span class="serie__desc">Spot e prodotti immaginati con l'AI. Sono concept, e lo dichiaro sempre.</span>
+          </li>
+          <li class="serie__row" data-serie="carosello" tabindex="0">
+            <span class="serie__day">Sab</span>
+            <span class="serie__name">Carosello</span>
+            <span class="serie__desc">Schede da salvare: glossari, confronti e procedure da rileggere quando servono.</span>
+          </li>
+          <li class="serie__row" data-serie="bollettino" tabindex="0">
+            <span class="serie__day">Dom</span>
+            <span class="serie__name">Bollettino</span>
+            <span class="serie__desc">Il Bollettino dell'Archivio: le news della settimana in un carosello, ognuna con la sua fonte.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FASCICOLI -->
+    <section class="fascicoli" id="fascicoli">
+      <div class="wrap fascicoli__grid">
+        <figure class="fascicoli__photo reveal">
+          <img src="assets/img/drawer.webp" alt="Un cassetto d'archivio pieno di cartelline color carta" loading="lazy" width="752" height="1344">
+        </figure>
+
+        <div class="fascicoli__body">
+          <p class="code reveal">L'ARCHIVIO / FASCICOLI GRATUITI</p>
+          <h2 class="display h2 reveal">Ogni reperto ha il suo fascicolo.</h2>
+          <p class="lede reveal">Il materiale completo dietro al contenuto: prompt, procedure, schede. Gratis, in PDF.</p>
+
+          <ol class="how reveal">
+            <li><i class="ph ph-play-circle" aria-hidden="true"></i><b>Guarda il reperto</b><span>su Instagram</span></li>
+            <li><i class="ph ph-chat-circle-text" aria-hidden="true"></i><b>Commenta la parola</b><span>indicata nel post</span></li>
+            <li><i class="ph ph-folder-open" aria-hidden="true"></i><b>Ricevi il fascicolo</b><span>in privato, una volta sola</span></li>
+          </ol>
+
+          <div class="folders">
+            <article class="folder reveal">
+              <span class="folder__tab">WL-001</span>
+              <h3>16 parole dell'AI, spiegate senza gergo</h3>
+              <p>Le 8 del carosello più LLM, finestra di contesto, fine-tuning, embedding, modelli aperti, temperatura, MCP e vibe coding.</p>
+              <p class="keyword">Parola: <b>GLOSSARIO</b></p>
+              <div class="stamp stamp--small">Pronto</div>
+            </article>
+            <article class="folder folder--alt reveal">
+              <span class="folder__tab">WL-002</span>
+              <h3>Le 4 stazioni dello studio</h3>
+              <p>Lo schema con cui nasce ogni reel: lo strumento di ogni stazione, la sua regola e il prompt da copiare.</p>
+              <p class="keyword">Parola: <b>WORKFLOW</b></p>
+              <div class="stamp stamp--small">Pronto</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODO (unica inversione: nero archivio) -->
+    <section class="metodo" id="metodo">
+      <div class="wrap">
+        <h2 class="display h2 reveal">Come nasce un reperto.</h2>
+        <p class="lede reveal">Quattro stazioni. L'AI esegue, le scelte restano umane: argomento, tono e approvazione finale non si delegano.</p>
+
+        <ol class="stations" data-stations>
+          <li class="station reveal">
+            <span class="station__n">01</span>
+            <h3>Ricerca</h3>
+            <p class="station__tool">Claude, con ricerca web</p>
+            <p>Tutto ciò che non ha una fonte primaria, una data e un link si scarta.</p>
+          </li>
+          <li class="station reveal">
+            <span class="station__n">02</span>
+            <h3>Testo</h3>
+            <p class="station__tool">Claude</p>
+            <p>Sempre la stessa struttura: aggancio, fatto, verdetto. È la struttura a rendere veloce la scrittura.</p>
+          </li>
+          <li class="station reveal">
+            <span class="station__n">03</span>
+            <h3>Voce</h3>
+            <p class="station__tool">Higgsfield</p>
+            <p>La mia voce, generata da un campione che ho registrato io. Tre versioni, resta quella senza esitazioni.</p>
+          </li>
+          <li class="station reveal">
+            <span class="station__n">04</span>
+            <h3>Montaggio</h3>
+            <p class="station__tool">Whisper e HyperFrames</p>
+            <p>Ogni parola a schermo è agganciata alla voce. È il video che si adatta alla voce, non il contrario.</p>
+          </li>
+        </ol>
+
+        <div class="rules">
+          <h3 class="rules__title reveal">Le regole dell'archivio</h3>
+          <ul class="rules__list">
+            <li class="reveal">Ogni dato ha una fonte, con la sua data. Oppure viene da un test che ho fatto io.</li>
+            <li class="reveal">Notizie, ipotesi e opinioni restano separate. Sempre.</li>
+            <li class="reveal">I prodotti e gli spot immaginari sono dichiarati come concept.</li>
+            <li class="reveal">Il timbro "verificato" va solo su ciò che ho provato davvero.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI C'E' DIETRO -->
+    <section class="founder" id="chi">
+      <div class="wrap founder__grid">
+        <figure class="founder__card reveal" data-tilt>
+          <img src="assets/img/founder.webp" alt="Ritratto del founder di WaweLab, metà in fotocopia retinata e metà a colori, su una scheda d'archivio" loading="lazy" width="900" height="900">
+        </figure>
+        <div class="founder__body">
+          <h2 class="display h2 reveal">Il reperto zero <span class="accent">sono io.</span></h2>
+          <p class="reveal">Sono un full-stack developer. Ho aperto WaweLab per portare l'AI anche a chi non scrive codice: provo i tool appena escono, li uso per lavori veri e archivio quello che resta.</p>
+          <p class="reveal">Parlo in prima persona, con numeri veri e un verdetto alla fine. Se una cosa non vale i soldi, lo dico.</p>
+          <p class="aside reveal"><i class="ph ph-info" aria-hidden="true"></i>Anche questo sito è stato progettato e scritto con Claude, a partire dal sistema visivo dell'archivio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PER AZIENDE -->
+    <section class="aziende" id="aziende">
+      <div class="wrap">
+        <h2 class="display h2 reveal">Lo stesso metodo, per la tua attività.</h2>
+        <p class="lede reveal">I lavori dell'archivio diventano servizi. Si parte con pochi progetti, scelti con cura.</p>
+
+        <div class="bento">
+          <article class="tile tile--orange reveal">
+            <img src="assets/img/cut-sphere.webp" alt="" loading="lazy" width="720" height="720" class="tile__img tile__img--sphere">
+            <div class="tile__text">
+              <h3>Spot prodotto con l'AI</h3>
+              <p>Un video per il tuo prodotto, dall'idea al montaggio, senza set né troupe.</p>
+            </div>
+          </article>
+          <article class="tile tile--paper reveal">
+            <img src="assets/img/cut-phone.webp" alt="" loading="lazy" width="720" height="720" class="tile__img tile__img--phone">
+            <div class="tile__text">
+              <h3>Sito vetrina</h3>
+              <p>Un sito chiaro e veloce, progettato e scritto con l'AI.</p>
+            </div>
+          </article>
+          <article class="tile tile--card reveal">
+            <img src="assets/img/cut-computer.webp" alt="" loading="lazy" width="720" height="720" class="tile__img tile__img--computer">
+            <div class="tile__text">
+              <h3>Automazioni e agenti</h3>
+              <p>Il lavoro ripetitivo che oggi fai a mano, affidato a un flusso su misura.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="aziende__cta reveal">
+          <a class="btn btn--orange" href="https://www.instagram.com/wawelab.ai/" target="_blank" rel="noopener">
+            <span>Parliamo del progetto</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__sign">
+        <p class="display footer__hello">Benvenuti nell'Archivio.</p>
+        <div class="stamp stamp--footer" data-stamp>Archiviato <i class="ph ph-check" aria-hidden="true"></i></div>
+      </div>
+      <p class="footer__word display" aria-hidden="true">WaweLab</p>
+      <div class="footer__bar">
+        <a href="https://www.instagram.com/wawelab.ai/" target="_blank" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i> @wawelab.ai</a>
+        <span>Il futuro non si guarda. Si crea.</span>
+        <span>&copy; 2026 WaweLab</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <script src="main.js" defer></script>
+</body>
+</html>
