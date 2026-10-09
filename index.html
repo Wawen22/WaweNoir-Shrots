@@ -484,17 +484,16 @@
     </div>
   </footer>
 
-  <button class="scrollcue" data-cue type="button" aria-label="Scorri la pagina">
-    <svg class="scrollcue__ring" viewBox="0 0 120 120" aria-hidden="true">
-      <circle class="scrollcue__track" cx="60" cy="60" r="57"/>
-      <circle class="scrollcue__fill" cx="60" cy="60" r="57" pathLength="1" data-cue-fill/>
-    </svg>
-    <svg class="scrollcue__text" viewBox="0 0 120 120" aria-hidden="true" data-cue-text>
-      <defs><path id="cuePath" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs>
-      <text textLength="266" lengthAdjust="spacingAndGlyphs"><textPath href="#cuePath" startOffset="0" textLength="266" lengthAdjust="spacingAndGlyphs">SCORRI L'ARCHIVIO / SCORRI L'ARCHIVIO / </textPath></text>
-    </svg>
-    <span class="scrollcue__core" aria-hidden="true"><i class="ph ph-arrow-down" data-cue-arrow></i></span>
-  </button>
+  <!-- Indicatore di scroll: un righello d'archivio lungo il bordo destro -->
+  <aside class="edge" data-cue aria-label="Avanzamento nella pagina">
+    <span class="edge__hint">Scorri l'archivio</span>
+    <div class="edge__track" data-cue-track aria-hidden="true">
+      <span class="edge__fill" data-cue-fill></span>
+      <span class="edge__thumb" data-cue-thumb><span data-cue-num>01</span></span>
+    </div>
+    <span class="edge__section" data-cue-section aria-live="polite">Archivio</span>
+    <button class="edge__btn" type="button" data-cue-btn aria-label="Scorri la pagina"><i class="ph ph-arrow-down" data-cue-arrow aria-hidden="true"></i></button>
+  </aside>
 
   <div class="grain" aria-hidden="true"></div>
 

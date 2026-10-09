@@ -524,42 +524,66 @@
     b.addEventListener("pointerleave", () => { xTo(0); yTo(0); });
   });
 
-  // ---------- INDICATORE DI SCROLL ----------
+  // ---------- INDICATORE DI SCROLL: righello sul bordo destro ----------
   const cue = $("[data-cue]");
   if (cue) {
+    const track = $("[data-cue-track]", cue);
     const fill = $("[data-cue-fill]", cue);
-    const text = $("[data-cue-text]", cue);
+    const thumb = $("[data-cue-thumb]", cue);
+    const num = $("[data-cue-num]", cue);
+    const secLabel = $("[data-cue-section]", cue);
     const arrow = $("[data-cue-arrow]", cue);
-    const spin = gsap.to(text, { rotation: 360, duration: 16, repeat: -1, ease: "none", transformOrigin: "50% 50%" });
-    const bob = gsap.to(arrow, { y: 5, duration: 0.7, yoyo: true, repeat: -1, ease: "sine.inOut" });
+    const btn = $("[data-cue-btn]", cue);
+    const thumbY = gsap.quickTo(thumb, "y", { duration: 0.5, ease: "power3.out" });
+    gsap.to(arrow, { y: 4, duration: 0.7, yoyo: true, repeat: -1, ease: "sine.inOut" });
+
     let mode = "down";
+    let inPan = false;
     const setMode = (m) => {
       if (m === mode) return;
       mode = m;
       gsap.to(arrow, { rotation: m === "right" ? -90 : m === "up" ? 180 : 0, duration: 0.5, ease: "power3.out" });
-      cue.setAttribute("aria-label", m === "up" ? "Torna all'inizio" : "Scorri la pagina");
+      btn.setAttribute("aria-label", m === "up" ? "Torna all'inizio" : "Scorri la pagina");
     };
-    let inPan = false;
     ScrollTrigger.create({
       start: 0, end: "max",
       onUpdate(self) {
-        gsap.set(fill, { strokeDashoffset: 1 - self.progress });
-        const v = Math.abs(self.getVelocity());
-        gsap.to(spin, { timeScale: 1 + Math.min(v / 250, 8), duration: 0.2, overwrite: true });
-        gsap.to(spin, { timeScale: 1, duration: 1.4, delay: 0.25, ease: "power2.out" });
+        gsap.set(fill, { scaleY: self.progress });
+        thumbY(self.progress * (track.offsetHeight - thumb.offsetHeight));
         setMode(self.progress > 0.985 ? "up" : inPan ? "right" : "down");
       },
     });
+
+    // Nome della sezione corrente, che si "decifra" quando cambia
+    const sections = [
+      ["[data-hero]", "Archivio"], ["[data-manifesto]", "Manifesto"], ["[data-pan]", "Reperti"],
+      ["#serie", "Serie"], ["#fascicoli", "Fascicoli"], ["#metodo", "Metodo"],
+      ["#chi", "Reperto zero"], ["#aziende", "Per aziende"], [".footer", "Fine"],
+    ];
+    let currentSec = "";
+    const showSection = (name, i) => {
+      if (name === currentSec) return;
+      currentSec = name;
+      secLabel.textContent = name;
+      secLabel.dataset.final = name.toUpperCase();
+      scramble(secLabel, 0.5);
+      num.textContent = String(i + 1).padStart(2, "0");
+      gsap.fromTo(thumb, { scale: 1.25 }, { scale: 1, duration: 0.4, ease: "power3.out" });
+    };
+    sections.forEach(([sel, name], i) => {
+      const el = $(sel);
+      if (el) ScrollTrigger.create({ trigger: el, start: "top 55%", end: "bottom 55%", onToggle: (st) => st.isActive && showSection(name, i) });
+    });
+
     const panSec = $("[data-pan]");
-    if (panSec) ScrollTrigger.create({ trigger: panSec, start: "top top", end: () => `+=${Math.max(1, $("[data-pan-track]").scrollWidth - window.innerWidth)}`, onToggle: (s) => { inPan = s.isActive && !panSec.classList.contains("is-native"); setMode(inPan ? "right" : "down"); } });
-    ScrollTrigger.create({ trigger: ".metodo", start: "top bottom-=70", end: "bottom bottom-=70", toggleClass: { targets: cue, className: "on-dark" } });
-    cue.addEventListener("click", () => {
+    if (panSec) ScrollTrigger.create({ trigger: panSec, start: "top top", end: () => `+=${Math.max(1, $("[data-pan-track]").scrollWidth - window.innerWidth)}`, onToggle: (st) => { inPan = st.isActive && !panSec.classList.contains("is-native"); setMode(inPan ? "right" : "down"); } });
+    ScrollTrigger.create({ trigger: ".metodo", start: "top 50%", end: "bottom 50%", toggleClass: { targets: cue, className: "on-dark" } });
+    btn.addEventListener("click", () => {
       if (mode === "up") { lenis ? lenis.scrollTo(0, { duration: 1.6 }) : window.scrollTo({ top: 0, behavior: "smooth" }); return; }
       const to = window.scrollY + window.innerHeight * 0.85;
       lenis ? lenis.scrollTo(to, { duration: 1 }) : window.scrollTo({ top: to, behavior: "smooth" });
     });
-    gsap.from(cue, { scale: 0, rotation: -120, duration: 0.9, ease: "power4.out", delay: seen ? 1.4 : 3.4 });
-    void bob;
+    gsap.from(cue.children, { x: 40, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.08, delay: seen ? 1.2 : 3.2 });
   }
 
   // Ricalcolo quando i font sono pronti (cambiano le misure)
